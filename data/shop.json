@@ -1,12 +1,1 @@
-[
-  {
-    "id": "s1",
-    "title": "Autumn Fields",
-    "src": "https://res.cloudinary.com/YOUR_CLOUD/image/upload/v1/shop/autumn-fields.jpg",
-    "price": 450,
-    "medium": "Oil on canvas, 60x80cm",
-    "sold": false,
-    "stripeLink": "https://buy.stripe.com/YOUR_LINK",
-    "order": 0
-  }
-]
+[]
