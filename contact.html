@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Julie Ann Brown</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Julie Ann Brown</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <h1 class="page-title">Get in Touch</h1>
+    <p>For commissions, enquiries, or purchases, please use the form below.</p>
+
+    <!-- Use Formspree (free, no server needed) -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <label>Name <input type="text" name="name" required /></label>
+      <label>Email <input type="email" name="email" required /></label>
+      <label>Subject <input type="text" name="subject" /></label>
+      <label>Message <textarea name="message" rows="6" required></textarea></label>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Julie Ann Brown. All rights reserved.</p>
+  </footer>
+</body>
+</html>

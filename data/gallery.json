@@ -1,0 +1,16 @@
+[
+  {
+    "id": "g1",
+    "title": "Autumn Fields",
+    "src": "https://res.cloudinary.com/YOUR_CLOUD/image/upload/v1/gallery/autumn-fields.jpg",
+    "category": "Landscape",
+    "featured": true
+  },
+  {
+    "id": "g2",
+    "title": "Blue Wren Study",
+    "src": "https://res.cloudinary.com/YOUR_CLOUD/image/upload/v1/gallery/blue-wren.jpg",
+    "category": "Nature",
+    "featured": false
+  }
+]
