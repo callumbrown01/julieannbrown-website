@@ -1,10 +1,10 @@
 // ─── CONFIG ───────────────────────────────────────────────────────
 const GITHUB_OWNER = 'YOUR_GITHUB_USERNAME';
-const GITHUB_REPO  = 'julieannbrown-website';
-const GITHUB_TOKEN = 'YOUR_FINE_GRAINED_PAT'; // see setup notes
-const CLOUDINARY_CLOUD = 'YOUR_CLOUDINARY_CLOUD_NAME';
-const CLOUDINARY_PRESET = 'YOUR_UPLOAD_PRESET';  // unsigned preset
-const ADMIN_PASSWORD_HASH = 'YOUR_SHA256_HASH_HERE'; // hash of password
+const GITHUB_REPO = 'julieannbrown-website';
+const GITHUB_TOKEN = 'https://callumbrown01.github.io/julieannbrown-website/contact.html';
+const CLOUDINARY_CLOUD = 'fqtug4al';
+const CLOUDINARY_PRESET = 'julieannbrown-website';
+const ADMIN_PASSWORD_HASH = 'c9374488070ef72bbc2b6a766efe60e2af03f27ac5d09d3e0fee87337a6ef928'; // hash of password
 
 // ─── LOGIN ────────────────────────────────────────────────────────
 async function sha256(message) {
