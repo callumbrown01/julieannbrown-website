@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshops - Julie Ann Brown</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops - Julie Ann Brown</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="index.html">Julie Ann Brown</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="workshops.html" class="active">Workshops</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Julie Ann Brown</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="workshops.html" class="active">Workshops</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="workshops-container">
-        <h1>Workshops & Classes</h1>
-        <p class="workshops-intro">Join Julie Ann for her upcoming workshops and classes. Learn new techniques and create amazing art!</p>
-        
-        <div id="workshops-list" class="workshops-grid">
-            <!-- Populated by workshops.js -->
-        </div>
-    </main>
+  <main class="workshops-container">
+    <h1>Workshops & Classes</h1>
+    <p class="workshops-intro">Join Julie Ann for her upcoming workshops and classes. Learn new techniques and create
+      amazing art!</p>
 
-    <!-- Enrollment Form Modal -->
-    <div id="enrol-modal" class="modal hidden">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeEnrolForm()">&times;</button>
-            <h2 id="enrol-modal-title">Enrol in Workshop</h2>
-            
-            <form id="enrol-form" onsubmit="submitEnrolForm(event)">
-                <div class="form-group">
-                    <label for="enrol-first-name">First Name *</label>
-                    <input type="text" id="enrol-first-name" name="firstName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="enrol-last-name">Last Name *</label>
-                    <input type="text" id="enrol-last-name" name="lastName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="enrol-email">Email *</label>
-                    <input type="email" id="enrol-email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="enrol-phone">Phone Number *</label>
-                    <input type="tel" id="enrol-phone" name="phone" required>
-                </div>
-
-                <div id="enrol-days-group" class="form-group hidden">
-                    <label for="enrol-days">Number of Days *</label>
-                    <select id="enrol-days" name="days">
-                        <option value="">Select...</option>
-                        <option value="1">1 Day</option>
-                        <option value="2">2 Days</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label id="enrol-cost-label"></label>
-                </div>
-
-                <button type="submit" class="btn-enrol-submit">Complete Enrollment & Pay</button>
-            </form>
-
-            <p class="form-note">You will be redirected to payment after submitting this form.</p>
-        </div>
+    <div id="workshops-list" class="workshops-grid">
+      <!-- Populated by workshops.js -->
     </div>
+  </main>
 
-    <script src="js/workshops.js"></script>
+  <!-- Enrollment Form Modal -->
+  <div id="enrol-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeEnrolForm()">&times;</button>
+      <h2 id="enrol-modal-title">Enrol in Workshop</h2>
+
+      <form id="enrol-form" onsubmit="submitEnrolForm(event)">
+        <div class="form-group">
+          <label for="enrol-first-name">First Name *</label>
+          <input type="text" id="enrol-first-name" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="enrol-last-name">Last Name *</label>
+          <input type="text" id="enrol-last-name" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="enrol-email">Email *</label>
+          <input type="email" id="enrol-email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="enrol-phone">Phone Number *</label>
+          <input type="tel" id="enrol-phone" name="phone" required>
+        </div>
+
+        <div id="enrol-days-group" class="form-group hidden">
+          <label for="enrol-days">Number of Days *</label>
+          <select id="enrol-days" name="days">
+            <option value="">Select...</option>
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="enrol-cost-label"></label>
+        </div>
+
+        <button type="submit" class="btn-enrol-submit">Complete Enrollment & Pay</button>
+      </form>
+
+      <p class="form-note">You will be redirected to payment after submitting this form.</p>
+    </div>
+  </div>
+
+  <script src="js/workshops.js"></script>
 </body>
+
 </html>

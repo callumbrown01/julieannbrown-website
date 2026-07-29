@@ -10,7 +10,7 @@ let currentEnrolWorkshop = null;
 async function initWorkshops() {
   try {
     const githubToken = localStorage.getItem('githubToken');
-    
+
     // Try to fetch from GitHub API if token is available
     if (githubToken) {
       const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/workshops.json`, {
@@ -56,9 +56,9 @@ function renderWorkshops() {
 
     const div = document.createElement('div');
     div.className = `workshop-card ${isFull ? 'full' : ''}`;
-    
+
     const imageHtml = workshop.image ? `<img src="${workshop.image}" alt="${workshop.title}" class="workshop-image">` : '';
-    
+
     div.innerHTML = `
       ${imageHtml}
       <div class="workshop-info">

@@ -1,113 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin — Julie Ann Brown</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    body { font-family: sans-serif; background: #f5f5f5; }
-    .admin-wrap { max-width: 960px; margin: 3rem auto; padding: 0 1.5rem; }
-    #login-screen { max-width: 360px; margin: 6rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-    #login-screen h2 { margin-bottom: 1.5rem; }
-    #login-screen input { width: 100%; padding: 0.7rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
-    .hidden { display: none !important; }
-    .upload-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; margin-bottom: 1.5rem; }
-    .upload-row input[type=text], .upload-row input[type=number], .upload-row select { padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
-    .upload-row input[type=file] { font-size: 0.9rem; }
-    .drag-handle { cursor: grab; font-size: 1.2rem; margin-right: 6px; }
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+
+    .admin-wrap {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    #login-screen {
+      max-width: 360px;
+      margin: 6rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #login-screen h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    #login-screen input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .upload-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 1.5rem;
+    }
+
+    .upload-row input[type=text],
+    .upload-row input[type=number],
+    .upload-row select {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .upload-row input[type=file] {
+      font-size: 0.9rem;
+    }
+
+    .drag-handle {
+      cursor: grab;
+      font-size: 1.2rem;
+      margin-right: 6px;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- Login Screen -->
-<div id="login-screen">
-  <h2>Admin Login</h2>
-  <input id="pwd-input" type="password" placeholder="Password" />
-  <button class="btn" onclick="checkLogin()">Login</button>
-  <p id="login-error" style="color:red;margin-top:0.5rem"></p>
-</div>
-
-<!-- Admin Panel (hidden until login) -->
-<div id="admin-panel" class="admin-wrap hidden">
-  <h1 style="margin-bottom:2rem">🖌 Admin Panel</h1>
-
-  <!-- GitHub Token Setup -->
-  <div class="admin-section">
-    <h2>GitHub Authentication</h2>
-    <p style="margin-bottom:1rem;color:#666">Enter your GitHub Personal Access Token to save changes. <a href="https://github.com/settings/tokens?type=beta" target="_blank">Create a new token here</a> with 'repo' scope. Your token is stored securely in browser storage.</p>
-    <div class="upload-row">
-      <input type="password" id="github-token-input" placeholder="github_pat_..." style="flex:1" />
-      <button class="btn" onclick="setGithubToken()">Set Token</button>
-    </div>
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <h2>Admin Login</h2>
+    <input id="pwd-input" type="password" placeholder="Password" />
+    <button class="btn" onclick="checkLogin()">Login</button>
+    <p id="login-error" style="color:red;margin-top:0.5rem"></p>
   </div>
 
-  <!-- Gallery Management -->
-  <div class="admin-section">
-    <h2>Gallery Images</h2>
-    <div class="upload-row">
-      <input type="file" id="gallery-file" accept="image/*" />
-      <input type="text" id="gallery-title" placeholder="Title" />
-      <select id="gallery-category">
-        <option>Landscape</option>
-        <option>Nature</option>
-        <option>Abstract</option>
-        <option>Portrait</option>
-        <option>Other</option>
-      </select>
-      <label><input type="checkbox" id="gallery-featured" /> Featured on Home</label>
-      <button class="btn" onclick="uploadGalleryImage()">Upload & Add</button>
-    </div>
-    <div id="gallery-admin-list" class="admin-image-list"></div>
-  </div>
+  <!-- Admin Panel (hidden until login) -->
+  <div id="admin-panel" class="admin-wrap hidden">
+    <h1 style="margin-bottom:2rem">🖌 Admin Panel</h1>
 
-  <!-- Shop Management -->
-  <div class="admin-section">
-    <h2>Shop Items</h2>
-    <p style="margin-bottom:1rem;color:#666">Drag items to reorder. Changes save automatically.</p>
-    <div class="upload-row">
-      <input type="file" id="shop-file" accept="image/*" />
-      <input type="text" id="shop-title" placeholder="Title" />
-      <input type="number" id="shop-price" placeholder="Price (AUD)" />
-      <input type="text" id="shop-medium" placeholder="Medium & size" />
-      <input type="text" id="shop-stripe" placeholder="Stripe Buy Link" />
-      <button class="btn" onclick="uploadShopItem()">Add to Shop</button>
-    </div>
-    <div id="shop-admin-list" class="admin-image-list" ondragover="event.preventDefault()"></div>
-  </div>
-
-  <!-- Workshops Management -->
-  <div class="admin-section">
-    <h2>Workshops & Classes</h2>
-    <form id="workshop-form">
+    <!-- GitHub Token Setup -->
+    <div class="admin-section">
+      <h2>GitHub Authentication</h2>
+      <p style="margin-bottom:1rem;color:#666">Enter your GitHub Personal Access Token to save changes. <a
+          href="https://github.com/settings/tokens?type=beta" target="_blank">Create a new token here</a> with 'repo'
+        scope. Your token is stored securely in browser storage.</p>
       <div class="upload-row">
-        <input type="file" id="workshop-file" accept="image/*" />
-        <input type="text" id="workshop-title" placeholder="Workshop Title" required />
-        <input type="date" id="workshop-date" required />
-        <input type="time" id="workshop-time" required />
-        <input type="text" id="workshop-duration" placeholder="e.g., 3 hours" required />
+        <input type="password" id="github-token-input" placeholder="github_pat_..." style="flex:1" />
+        <button class="btn" onclick="setGithubToken()">Set Token</button>
       </div>
+    </div>
+
+    <!-- Gallery Management -->
+    <div class="admin-section">
+      <h2>Gallery Images</h2>
       <div class="upload-row">
-        <textarea id="workshop-description" placeholder="Description" style="flex:1;padding:0.6rem;border:1px solid #ccc;border-radius:4px;font-size:0.9rem;min-height:80px;font-family:sans-serif"></textarea>
+        <input type="file" id="gallery-file" accept="image/*" />
+        <input type="text" id="gallery-title" placeholder="Title" />
+        <select id="gallery-category">
+          <option>Landscape</option>
+          <option>Nature</option>
+          <option>Abstract</option>
+          <option>Portrait</option>
+          <option>Other</option>
+        </select>
+        <label><input type="checkbox" id="gallery-featured" /> Featured on Home</label>
+        <button class="btn" onclick="uploadGalleryImage()">Upload & Add</button>
       </div>
+      <div id="gallery-admin-list" class="admin-image-list"></div>
+    </div>
+
+    <!-- Shop Management -->
+    <div class="admin-section">
+      <h2>Shop Items</h2>
+      <p style="margin-bottom:1rem;color:#666">Drag items to reorder. Changes save automatically.</p>
       <div class="upload-row">
-        <input type="number" id="workshop-cost" placeholder="Cost (AUD)" step="0.01" required />
-        <input type="number" id="workshop-slots" placeholder="Max Slots" min="1" required />
-        <label><input type="checkbox" id="workshop-multiday" onchange="toggleWorkshopMultiDay()" /> Multi-day</label>
-        <div id="workshop-days-group" class="hidden">
-          <input type="number" id="workshop-days-available" placeholder="Days available" min="1" max="5" />
+        <input type="file" id="shop-file" accept="image/*" />
+        <input type="text" id="shop-title" placeholder="Title" />
+        <input type="number" id="shop-price" placeholder="Price (AUD)" />
+        <input type="text" id="shop-medium" placeholder="Medium & size" />
+        <input type="text" id="shop-stripe" placeholder="Stripe Buy Link" />
+        <button class="btn" onclick="uploadShopItem()">Add to Shop</button>
+      </div>
+      <div id="shop-admin-list" class="admin-image-list" ondragover="event.preventDefault()"></div>
+    </div>
+
+    <!-- Workshops Management -->
+    <div class="admin-section">
+      <h2>Workshops & Classes</h2>
+      <form id="workshop-form">
+        <div class="upload-row">
+          <input type="file" id="workshop-file" accept="image/*" />
+          <input type="text" id="workshop-title" placeholder="Workshop Title" required />
+          <input type="date" id="workshop-date" required />
+          <input type="time" id="workshop-time" required />
+          <input type="text" id="workshop-duration" placeholder="e.g., 3 hours" required />
         </div>
-        <input type="text" id="workshop-stripe" placeholder="Stripe Link (optional)" />
-        <button type="button" class="btn" onclick="uploadWorkshop()">Add Workshop</button>
-      </div>
-    </form>
-    <div id="workshops-admin-list"></div>
+        <div class="upload-row">
+          <textarea id="workshop-description" placeholder="Description"
+            style="flex:1;padding:0.6rem;border:1px solid #ccc;border-radius:4px;font-size:0.9rem;min-height:80px;font-family:sans-serif"></textarea>
+        </div>
+        <div class="upload-row">
+          <input type="number" id="workshop-cost" placeholder="Cost (AUD)" step="0.01" required />
+          <input type="number" id="workshop-slots" placeholder="Max Slots" min="1" required />
+          <label><input type="checkbox" id="workshop-multiday" onchange="toggleWorkshopMultiDay()" /> Multi-day</label>
+          <div id="workshop-days-group" class="hidden">
+            <input type="number" id="workshop-days-available" placeholder="Days available" min="1" max="5" />
+          </div>
+          <input type="text" id="workshop-stripe" placeholder="Stripe Link (optional)" />
+          <button type="button" class="btn" onclick="uploadWorkshop()">Add Workshop</button>
+        </div>
+      </form>
+      <div id="workshops-admin-list"></div>
+    </div>
+
+    <button class="btn" onclick="saveChanges()" style="margin-top:1rem">💾 Save All Changes</button>
+    <p id="save-status" style="margin-top:1rem;color:green"></p>
   </div>
 
-  <button class="btn" onclick="saveChanges()" style="margin-top:1rem">💾 Save All Changes</button>
-  <p id="save-status" style="margin-top:1rem;color:green"></p>
-</div>
-
-<script src="js/admin.js"></script>
+  <script src="js/admin.js"></script>
 </body>
+
 </html>

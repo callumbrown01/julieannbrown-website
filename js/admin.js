@@ -240,11 +240,11 @@ function editWorkshop(i) {
     document.getElementById('workshop-days-available').value = workshop.daysAvailable;
   }
   document.getElementById('workshop-stripe').value = workshop.stripeLink;
-  
+
   // Remove the old workshop and update after save
   workshopsData.splice(i, 1);
   renderAdminWorkshops();
-  
+
   // Scroll to form
   document.getElementById('workshop-form').scrollIntoView({ behavior: 'smooth' });
 }
@@ -253,10 +253,10 @@ function viewWorkshopEnrollments(i) {
   const workshop = workshopsData[i];
   const enrollments = JSON.parse(localStorage.getItem('workshopEnrollments') || '[]')
     .filter(e => e.workshopId === workshop.id);
-  
+
   let html = `<h3>Enrollments for: ${workshop.title}</h3>`;
   html += `<p>Total: ${enrollments.length}</p>`;
-  
+
   if (enrollments.length === 0) {
     html += '<p>No enrollments yet.</p>';
   } else {
@@ -266,7 +266,7 @@ function viewWorkshopEnrollments(i) {
     });
     html += '</table>';
   }
-  
+
   const win = window.open();
   win.document.write(html);
   win.document.close();
@@ -289,7 +289,7 @@ async function saveChanges() {
     document.getElementById('save-status').textContent = '❌ Error: GitHub token not set. Enter your PAT in the form below.';
     return;
   }
-  
+
   document.getElementById('save-status').textContent = 'Saving...';
   try {
     await saveFile('gallery.json', galleryData);
