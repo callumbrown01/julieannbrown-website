@@ -4,11 +4,10 @@ const GITHUB_REPO = 'julieannbrown-website';
 const CLOUDINARY_CLOUD = 'fqtug4al';
 const CLOUDINARY_PRESET = 'julieannbrown-website';
 const ADMIN_PASSWORD_HASH = 'c9374488070ef72bbc2b6a766efe60e2af03f27ac5d09d3e0fee87337a6ef928'; // hash of password
+const API_BASE = '/.netlify/functions';
 
-// Get GitHub token from localStorage (user must enter it in admin panel)
-function getGithubToken() {
-  return localStorage.getItem('githubToken') || '';
-}
+// Store admin password for passing to serverless functions
+let adminPassword = '';
 
 // ─── LOGIN ────────────────────────────────────────────────────────
 async function sha256(message) {
@@ -21,6 +20,7 @@ async function checkLogin() {
   const pwd = document.getElementById('pwd-input').value;
   const hash = await sha256(pwd);
   if (hash === ADMIN_PASSWORD_HASH) {
+    adminPassword = pwd; // Store for API calls
     document.getElementById('login-screen').classList.add('hidden');
     document.getElementById('admin-panel').classList.remove('hidden');
     loadAdminData();
@@ -35,13 +35,25 @@ let shopData = [];
 let workshopsData = [];
 
 async function fetchJSON(file) {
-  const token = getGithubToken();
-  const headers = token ? { Authorization: `token ${token}` } : {};
-  const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
-    headers
-  });
-  const json = await res.json();
-  return { data: JSON.parse(atob(json.content)), sha: json.sha };
+  try {
+    const res = await fetch(`${API_BASE}/github-fetch`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file })
+    });
+    
+    if (!res.ok) {
+      const error = await res.json();
+      throw new Error(error.error || `HTTP ${res.status}`);
+    }
+    
+    const json = await res.json();
+    return { data: json.data, sha: json.sha };
+  } catch (e) {
+    console.error(`Error fetching ${file}:`, e);
+    alert(`Error loading ${file}: ${e.message}`);
+    return { data: [], sha: '' };
+  }
 }
 
 async function loadAdminData() {
@@ -284,12 +296,6 @@ function toggleWorkshopMultiDay() {
 
 // ─── SAVE TO GITHUB ───────────────────────────────────────────────
 async function saveChanges() {
-  const token = getGithubToken();
-  if (!token) {
-    document.getElementById('save-status').textContent = '❌ Error: GitHub token not set. Enter your PAT in the form below.';
-    return;
-  }
-
   document.getElementById('save-status').textContent = 'Saving...';
   try {
     await saveFile('gallery.json', galleryData);
@@ -302,32 +308,22 @@ async function saveChanges() {
 }
 
 async function saveFile(file, data) {
-  const token = getGithubToken();
-  // Get current SHA
-  const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
-    headers: { Authorization: `token ${token}` }
-  });
-  const current = await res.json();
-
-  await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
-    method: 'PUT',
-    headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
+  const res = await fetch(`${API_BASE}/github-save`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      message: `Admin: update ${file}`,
-      content: btoa(JSON.stringify(data, null, 2)),
-      sha: current.sha
+      file,
+      data,
+      password: adminPassword
     })
   });
+
+  if (!res.ok) {
+    const error = await res.json();
+    throw new Error(error.error || `HTTP ${res.status}`);
+  }
 }
 
 // ─── GITHUB TOKEN MANAGEMENT ──────────────────────────────────────
-function setGithubToken() {
-  const token = document.getElementById('github-token-input').value.trim();
-  if (!token) {
-    alert('Please enter a GitHub Personal Access Token');
-    return;
-  }
-  localStorage.setItem('githubToken', token);
-  document.getElementById('github-token-input').value = '';
-  alert('✅ GitHub token saved securely in browser storage!');
-}
+// GitHub PAT is now stored as a repository secret in Netlify - no manual configuration needed!
+// The serverless functions will automatically use it from environment variables.

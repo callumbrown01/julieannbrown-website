@@ -1,0 +1,16 @@
+{
+  "name": "julieannbrown-website",
+  "version": "1.0.0",
+  "description": "Julie Ann Brown Artist Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build required for static site'"
+  },
+  "keywords": ["art", "artist", "gallery", "shop"],
+  "author": "Callum Brown",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^18.0.0"
+  }
+}

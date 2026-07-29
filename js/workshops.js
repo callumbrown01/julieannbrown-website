@@ -9,33 +9,13 @@ let currentEnrolWorkshop = null;
 // ─── INIT ──────────────────────────────────────────────────────────
 async function initWorkshops() {
   try {
-    const githubToken = localStorage.getItem('githubToken');
-
-    // Try to fetch from GitHub API if token is available
-    if (githubToken) {
-      const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/workshops.json`, {
-        headers: { Authorization: `token ${githubToken}` }
-      });
-      if (res.ok) {
-        const json = await res.json();
-        workshopsData = JSON.parse(atob(json.content));
-      } else {
-        throw new Error('GitHub fetch failed');
-      }
-    } else {
-      // Fallback to local fetch without authentication
-      const res = await fetch('data/workshops.json');
-      workshopsData = await res.json();
-    }
+    // Fetch from local file (GitHub updates via Netlify Functions)
+    const res = await fetch('data/workshops.json');
+    if (!res.ok) throw new Error('Failed to fetch');
+    workshopsData = await res.json();
   } catch (e) {
     console.error('Failed to load workshops:', e);
-    try {
-      const res = await fetch('data/workshops.json');
-      workshopsData = await res.json();
-    } catch (err) {
-      console.error('Fallback also failed:', err);
-      workshopsData = [];
-    }
+    workshopsData = [];
   }
   renderWorkshops();
 }
