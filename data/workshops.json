@@ -1,0 +1,17 @@
+[
+  {
+    "id": "w1",
+    "title": "Introduction to Watercolor",
+    "date": "2024-08-15",
+    "time": "10:00 AM",
+    "duration": "3 hours",
+    "description": "Learn the fundamentals of watercolor painting. Perfect for beginners. We'll cover basic techniques, color mixing, and wet-on-wet methods.",
+    "image": "https://via.placeholder.com/400x300?text=Watercolor+Class",
+    "cost": 45,
+    "maxSlots": 12,
+    "enrolledCount": 0,
+    "multiDay": false,
+    "daysAvailable": 1,
+    "stripeLink": ""
+  }
+]

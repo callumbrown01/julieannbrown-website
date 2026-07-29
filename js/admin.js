@@ -1,10 +1,14 @@
 // ─── CONFIG ───────────────────────────────────────────────────────
-const GITHUB_OWNER = 'YOUR_GITHUB_USERNAME';
+const GITHUB_OWNER = 'callumbrown01';
 const GITHUB_REPO = 'julieannbrown-website';
-const GITHUB_TOKEN = 'https://callumbrown01.github.io/julieannbrown-website/contact.html';
 const CLOUDINARY_CLOUD = 'fqtug4al';
 const CLOUDINARY_PRESET = 'julieannbrown-website';
 const ADMIN_PASSWORD_HASH = 'c9374488070ef72bbc2b6a766efe60e2af03f27ac5d09d3e0fee87337a6ef928'; // hash of password
+
+// Get GitHub token from localStorage (user must enter it in admin panel)
+function getGithubToken() {
+  return localStorage.getItem('githubToken') || '';
+}
 
 // ─── LOGIN ────────────────────────────────────────────────────────
 async function sha256(message) {
@@ -28,10 +32,13 @@ async function checkLogin() {
 // ─── DATA ─────────────────────────────────────────────────────────
 let galleryData = [];
 let shopData = [];
+let workshopsData = [];
 
 async function fetchJSON(file) {
+  const token = getGithubToken();
+  const headers = token ? { Authorization: `token ${token}` } : {};
   const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
-    headers: { Authorization: `token ${GITHUB_TOKEN}` }
+    headers
   });
   const json = await res.json();
   return { data: JSON.parse(atob(json.content)), sha: json.sha };
@@ -42,8 +49,11 @@ async function loadAdminData() {
   galleryData = g.data;
   const s = await fetchJSON('shop.json');
   shopData = s.data;
+  const w = await fetchJSON('workshops.json');
+  workshopsData = w.data;
   renderAdminGallery();
   renderAdminShop();
+  renderAdminWorkshops();
 }
 
 // ─── CLOUDINARY UPLOAD ────────────────────────────────────────────
@@ -138,12 +148,153 @@ function toggleSold(i, val) {
   shopData[i].sold = val;
 }
 
+// ─── WORKSHOPS ────────────────────────────────────────────────────
+async function uploadWorkshop() {
+  const file = document.getElementById('workshop-file').files[0];
+  const title = document.getElementById('workshop-title').value;
+  const date = document.getElementById('workshop-date').value;
+  const time = document.getElementById('workshop-time').value;
+  const duration = document.getElementById('workshop-duration').value;
+  const description = document.getElementById('workshop-description').value;
+  const cost = parseFloat(document.getElementById('workshop-cost').value);
+  const maxSlots = parseInt(document.getElementById('workshop-slots').value);
+  const multiDay = document.getElementById('workshop-multiday').checked;
+  const daysAvailable = multiDay ? parseInt(document.getElementById('workshop-days-available').value) : 1;
+  const stripeLink = document.getElementById('workshop-stripe').value;
+
+  if (!title || !date || !time || !cost || !maxSlots) {
+    return alert('Please fill in all required fields (title, date, time, cost, max slots).');
+  }
+
+  let imageUrl = '';
+  if (file) {
+    imageUrl = await uploadToCloudinary(file, 'workshops');
+  }
+
+  workshopsData.push({
+    id: 'w' + Date.now(),
+    title,
+    date,
+    time,
+    duration,
+    description,
+    image: imageUrl,
+    cost,
+    maxSlots,
+    enrolledCount: 0,
+    multiDay,
+    daysAvailable,
+    stripeLink
+  });
+
+  document.getElementById('workshop-form').reset();
+  document.getElementById('workshop-days-group').classList.add('hidden');
+  renderAdminWorkshops();
+}
+
+function renderAdminWorkshops() {
+  const list = document.getElementById('workshops-admin-list');
+  list.innerHTML = '';
+
+  workshopsData.forEach((workshop, i) => {
+    const div = document.createElement('div');
+    div.className = 'admin-workshop-item';
+    div.innerHTML = `
+      <div class="workshop-admin-header">
+        <strong>${workshop.title}</strong>
+        <span class="workshop-date">${workshop.date} @ ${workshop.time}</span>
+      </div>
+      <div class="workshop-admin-details">
+        <small>Cost: $${workshop.cost} | Slots: ${workshop.enrolledCount}/${workshop.maxSlots}</small>
+        ${workshop.image ? `<br><small>Image: ✓</small>` : ''}
+        ${workshop.multiDay ? `<br><small>Multi-day: ${workshop.daysAvailable} days</small>` : ''}
+      </div>
+      <div class="workshop-admin-actions">
+        <button class="btn-small" onclick="editWorkshop(${i})">Edit</button>
+        <button class="btn-small btn-danger" onclick="removeWorkshop(${i})">Delete</button>
+        <button class="btn-small" onclick="viewWorkshopEnrollments(${i})">View Enrollments (${workshop.enrolledCount})</button>
+      </div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function removeWorkshop(i) {
+  if (!confirm('Delete this workshop?')) return;
+  workshopsData.splice(i, 1);
+  renderAdminWorkshops();
+}
+
+function editWorkshop(i) {
+  const workshop = workshopsData[i];
+  document.getElementById('workshop-title').value = workshop.title;
+  document.getElementById('workshop-date').value = workshop.date;
+  document.getElementById('workshop-time').value = workshop.time;
+  document.getElementById('workshop-duration').value = workshop.duration;
+  document.getElementById('workshop-description').value = workshop.description;
+  document.getElementById('workshop-cost').value = workshop.cost;
+  document.getElementById('workshop-slots').value = workshop.maxSlots;
+  document.getElementById('workshop-multiday').checked = workshop.multiDay;
+  if (workshop.multiDay) {
+    document.getElementById('workshop-days-group').classList.remove('hidden');
+    document.getElementById('workshop-days-available').value = workshop.daysAvailable;
+  }
+  document.getElementById('workshop-stripe').value = workshop.stripeLink;
+  
+  // Remove the old workshop and update after save
+  workshopsData.splice(i, 1);
+  renderAdminWorkshops();
+  
+  // Scroll to form
+  document.getElementById('workshop-form').scrollIntoView({ behavior: 'smooth' });
+}
+
+function viewWorkshopEnrollments(i) {
+  const workshop = workshopsData[i];
+  const enrollments = JSON.parse(localStorage.getItem('workshopEnrollments') || '[]')
+    .filter(e => e.workshopId === workshop.id);
+  
+  let html = `<h3>Enrollments for: ${workshop.title}</h3>`;
+  html += `<p>Total: ${enrollments.length}</p>`;
+  
+  if (enrollments.length === 0) {
+    html += '<p>No enrollments yet.</p>';
+  } else {
+    html += '<table border="1" cellpadding="8"><tr><th>Name</th><th>Email</th><th>Phone</th><th>Days</th><th>Cost</th><th>Date</th></tr>';
+    enrollments.forEach(e => {
+      html += `<tr><td>${e.firstName} ${e.lastName}</td><td>${e.email}</td><td>${e.phone}</td><td>${e.days}</td><td>$${e.cost}</td><td>${new Date(e.timestamp).toLocaleDateString()}</td></tr>`;
+    });
+    html += '</table>';
+  }
+  
+  const win = window.open();
+  win.document.write(html);
+  win.document.close();
+}
+
+function toggleWorkshopMultiDay() {
+  const isChecked = document.getElementById('workshop-multiday').checked;
+  const daysGroup = document.getElementById('workshop-days-group');
+  if (isChecked) {
+    daysGroup.classList.remove('hidden');
+  } else {
+    daysGroup.classList.add('hidden');
+  }
+}
+
 // ─── SAVE TO GITHUB ───────────────────────────────────────────────
 async function saveChanges() {
+  const token = getGithubToken();
+  if (!token) {
+    document.getElementById('save-status').textContent = '❌ Error: GitHub token not set. Enter your PAT in the form below.';
+    return;
+  }
+  
   document.getElementById('save-status').textContent = 'Saving...';
   try {
     await saveFile('gallery.json', galleryData);
     await saveFile('shop.json', shopData);
+    await saveFile('workshops.json', workshopsData);
     document.getElementById('save-status').textContent = '✅ Saved! Site will update in ~1 minute.';
   } catch (e) {
     document.getElementById('save-status').textContent = '❌ Error: ' + e.message;
@@ -151,19 +302,32 @@ async function saveChanges() {
 }
 
 async function saveFile(file, data) {
+  const token = getGithubToken();
   // Get current SHA
   const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
-    headers: { Authorization: `token ${GITHUB_TOKEN}` }
+    headers: { Authorization: `token ${token}` }
   });
   const current = await res.json();
 
   await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/data/${file}`, {
     method: 'PUT',
-    headers: { Authorization: `token ${GITHUB_TOKEN}`, 'Content-Type': 'application/json' },
+    headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       message: `Admin: update ${file}`,
       content: btoa(JSON.stringify(data, null, 2)),
       sha: current.sha
     })
   });
+}
+
+// ─── GITHUB TOKEN MANAGEMENT ──────────────────────────────────────
+function setGithubToken() {
+  const token = document.getElementById('github-token-input').value.trim();
+  if (!token) {
+    alert('Please enter a GitHub Personal Access Token');
+    return;
+  }
+  localStorage.setItem('githubToken', token);
+  document.getElementById('github-token-input').value = '';
+  alert('✅ GitHub token saved securely in browser storage!');
 }

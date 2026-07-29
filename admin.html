@@ -32,6 +32,16 @@
 <div id="admin-panel" class="admin-wrap hidden">
   <h1 style="margin-bottom:2rem">🖌 Admin Panel</h1>
 
+  <!-- GitHub Token Setup -->
+  <div class="admin-section">
+    <h2>GitHub Authentication</h2>
+    <p style="margin-bottom:1rem;color:#666">Enter your GitHub Personal Access Token to save changes. <a href="https://github.com/settings/tokens?type=beta" target="_blank">Create a new token here</a> with 'repo' scope. Your token is stored securely in browser storage.</p>
+    <div class="upload-row">
+      <input type="password" id="github-token-input" placeholder="github_pat_..." style="flex:1" />
+      <button class="btn" onclick="setGithubToken()">Set Token</button>
+    </div>
+  </div>
+
   <!-- Gallery Management -->
   <div class="admin-section">
     <h2>Gallery Images</h2>
@@ -64,6 +74,34 @@
       <button class="btn" onclick="uploadShopItem()">Add to Shop</button>
     </div>
     <div id="shop-admin-list" class="admin-image-list" ondragover="event.preventDefault()"></div>
+  </div>
+
+  <!-- Workshops Management -->
+  <div class="admin-section">
+    <h2>Workshops & Classes</h2>
+    <form id="workshop-form">
+      <div class="upload-row">
+        <input type="file" id="workshop-file" accept="image/*" />
+        <input type="text" id="workshop-title" placeholder="Workshop Title" required />
+        <input type="date" id="workshop-date" required />
+        <input type="time" id="workshop-time" required />
+        <input type="text" id="workshop-duration" placeholder="e.g., 3 hours" required />
+      </div>
+      <div class="upload-row">
+        <textarea id="workshop-description" placeholder="Description" style="flex:1;padding:0.6rem;border:1px solid #ccc;border-radius:4px;font-size:0.9rem;min-height:80px;font-family:sans-serif"></textarea>
+      </div>
+      <div class="upload-row">
+        <input type="number" id="workshop-cost" placeholder="Cost (AUD)" step="0.01" required />
+        <input type="number" id="workshop-slots" placeholder="Max Slots" min="1" required />
+        <label><input type="checkbox" id="workshop-multiday" onchange="toggleWorkshopMultiDay()" /> Multi-day</label>
+        <div id="workshop-days-group" class="hidden">
+          <input type="number" id="workshop-days-available" placeholder="Days available" min="1" max="5" />
+        </div>
+        <input type="text" id="workshop-stripe" placeholder="Stripe Link (optional)" />
+        <button type="button" class="btn" onclick="uploadWorkshop()">Add Workshop</button>
+      </div>
+    </form>
+    <div id="workshops-admin-list"></div>
   </div>
 
   <button class="btn" onclick="saveChanges()" style="margin-top:1rem">💾 Save All Changes</button>
