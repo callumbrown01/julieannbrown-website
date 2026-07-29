@@ -41,12 +41,12 @@ async function fetchJSON(file) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ file })
     });
-    
+
     if (!res.ok) {
       const error = await res.json();
       throw new Error(error.error || `HTTP ${res.status}`);
     }
-    
+
     const json = await res.json();
     return { data: json.data, sha: json.sha };
   } catch (e) {
