@@ -43,16 +43,24 @@ async function fetchJSON(file) {
     });
 
     if (!res.ok) {
-      const error = await res.json();
-      throw new Error(error.error || `HTTP ${res.status}`);
+      throw new Error(`HTTP ${res.status}`);
     }
 
     const json = await res.json();
     return { data: json.data, sha: json.sha };
   } catch (e) {
-    console.error(`Error fetching ${file}:`, e);
-    alert(`Error loading ${file}: ${e.message}`);
-    return { data: [], sha: '' };
+    console.log(`Netlify function failed, loading local ${file}:`, e);
+    // Fallback to local JSON file
+    try {
+      const res = await fetch(`data/${file}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      return { data, sha: '' };
+    } catch (fallbackError) {
+      console.error(`Failed to load ${file}:`, fallbackError);
+      alert(`Error loading ${file}: ${fallbackError.message}`);
+      return { data: [], sha: '' };
+    }
   }
 }
 
