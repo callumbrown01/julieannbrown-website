@@ -4,8 +4,10 @@
   const grid = document.getElementById('gallery-grid');
   const filterBar = document.getElementById('gallery-filters');
 
-  // Build category filters
-  const categories = ['All', ...new Set(items.map(i => i.category))];
+  // Build category filters with predefined order
+  const validCategories = ['Landscape', 'Portrait', 'Creatures', 'Waterwork', 'Still Life'];
+  const categoriesInUse = new Set(items.map(i => i.category));
+  const categories = ['All', ...validCategories.filter(c => categoriesInUse.has(c))];
   categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'filter-btn' + (cat === 'All' ? ' active' : '');
