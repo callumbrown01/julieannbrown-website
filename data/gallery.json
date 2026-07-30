@@ -3,434 +3,558 @@
     "id": "g1785381323513",
     "title": "Stillwater",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381322/gallery/rerrebwnb6tygh2r4zhg.jpg",
-    "category": "Landscape",
-    "featured": true
+    "featured": true,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381326601",
     "title": "Python Pool",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381325/gallery/smsi7dmiawh6hrigy2x0.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381336363",
     "title": "Pelican 3",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381335/gallery/bgz5huaozksmefxohope.jpg",
-    "category": "Creatures",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
   },
   {
     "id": "g1785381342565",
     "title": "d0af02_3fd62124b9604192ae367d6d17c23c54_mv2",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381342/gallery/lb09woz47salhlctdusu.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381345763",
     "title": "TB-white-frame-Blue-Chair",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381345/gallery/qglmokxdcisicifz98zi.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381349122",
     "title": "LPP-White-frame-lounge",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381348/gallery/ox7tlvntmvu2e2gtnvja.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381352367",
     "title": "Billabong-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381351/gallery/kmayq3pscydqfitppvmh.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381355895",
     "title": "Billabong-white-frame-copy",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381355/gallery/xjsxmbqspa9xftxefnqw.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381359014",
     "title": "JFB-Blk-Frm-Brick-wall",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381358/gallery/chu4zedfufchv4ppjfhl.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381362982",
     "title": "QuokkaBabySQ-e1612319167894",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381362/gallery/hdjnlji0jxuhajrfdbio.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381366072",
     "title": "Pelican1-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381365/gallery/fy3awn71bmpdwy17lumm.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381368981",
     "title": "Pelican2-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381368/gallery/p5smxw7edbikxjjju7iz.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381372440",
     "title": "Kakapo-1",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381371/gallery/fmukvhd90uq2aegqpu6f.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381375237",
     "title": "George-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381374/gallery/g95goovumo0accxyphyk.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381379109",
     "title": "BoranupIlluminated",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381378/gallery/bepk5xqbxihgbgbvil0o.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381382392",
     "title": "SilentSentinel-MEDRES-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381381/gallery/wpxpfxcsebfnuaz5zwmr.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381385370",
     "title": "Just-flyin-by-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381384/gallery/agnjlc2fitbigmynwuci.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381388788",
     "title": "Vineyard-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381387/gallery/pi3gkpkwhehuqmd7nm4u.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381392104",
     "title": "EverlastingLoveCentre",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381391/gallery/khrqkvjn7uj1riutwwvl.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381396303",
     "title": "ThePlan",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381395/gallery/beryszbvapqc2lx2bk0c.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381398993",
     "title": "Smile-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381398/gallery/rl3pcumwutxlor4tnc6m.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381402162",
     "title": "Charli",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381401/gallery/x41johluodssoulo5fli.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381405325",
     "title": "Doug-and-His-Dog-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381404/gallery/bsbluwsm0hdczdhdfypk.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381408357",
     "title": "B-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381407/gallery/is83etuqhjqrcfxpooaw.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381412269",
     "title": "Mia-Final",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381411/gallery/jzkc3fs3ippxykxnlb7s.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381416095",
     "title": "gen_revised",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381415/gallery/ofps2phiwkeksvuyhsga.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381419566",
     "title": "HH-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381418/gallery/lfrpkj4yccwucy9khn81.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381422613",
     "title": "SamBEST-warm-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381422/gallery/gydtkusrr3i1lnjr9idj.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381426038",
     "title": "Jack-MEDRES-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381425/gallery/wn3ovbcrj6hjer42hehp.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381429090",
     "title": "Julia-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381428/gallery/rrmfnqe1xfwsbu6qsqfc.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381432713",
     "title": "TheBurdenOfExpectationBEST",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381432/gallery/mk80jgvtpkhjy1aibpx9.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381436234",
     "title": "Lily-Final",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381435/gallery/hbxosqtdjfvii4ev9njd.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381439357",
     "title": "Children-of-the-Grandddy-Fig-Tree-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381438/gallery/xucpnhdwswjmdtntfcln.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381442547",
     "title": "BradyBunchFreoPort-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381441/gallery/dybrj8dusnjxvtdcab5x.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381445370",
     "title": "Waterdance-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381444/gallery/rr0o03m294i8fgifbmoi.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381448183",
     "title": "deepblue",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381447/gallery/tekpy4i7cmlyoq9po5u0.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381451360",
     "title": "Whorl-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381450/gallery/eb24psclp3ceyermmyim.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381454833",
     "title": "Tahitian-Pool",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381454/gallery/hpjekpsa2vah50kzhqzc.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381458305",
     "title": "Moana-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381457/gallery/ek9zykhtgnkv2pro8ttf.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381461314",
     "title": "parakeet",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381460/gallery/ezljkr2tgr8y0ay1fa6r.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381465230",
     "title": "Dark-Water-MEDRES-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381463/gallery/ztasnvsdzooaesikvw0c.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381468249",
     "title": "Screen-Shot-2020-12-15-at-11",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381467/gallery/jxr11oh4leb5y89abzml.png",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381471011",
     "title": "Indjinup-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381470/gallery/erd8fzlsxj1qyctjz45k.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381473676",
     "title": "GoldenRiverGirl-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381473/gallery/nq3xe3q9g0jkmc7bpuga.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381476330",
     "title": "Disturbed-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381475/gallery/lv9frx99xqzkbov9ssqz.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381479284",
     "title": "Cathedral-Rocks-LOWRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381478/gallery/yuxarqqbdvl0g9qawvgo.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381482651",
     "title": "FreoPortMEDRES-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381481/gallery/nohbpxsbd1ykvoig286s.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381485755",
     "title": "StrawberryDuoLORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381485/gallery/qhvtc8dgat79gtwoz8ng.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381488790",
     "title": "StrawberriesonBlueLORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381488/gallery/xgsmctgep9hcbndphmal.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381492385",
     "title": "Strawberry-Bowl-LORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381491/gallery/p6nykukhkwzil9xb1kkr.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381495715",
     "title": "GrapesSilverBowlLORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381495/gallery/ypu8xdf6vxqsq4i7p1lp.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381498957",
     "title": "GrapeBunchLORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381498/gallery/u9jlsucnxelk9awjzuoh.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381502429",
     "title": "Apple-Bowl-LORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381501/gallery/kpgw0mw9k782vfymfn7h.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381505613",
     "title": "Lemons-LORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381505/gallery/iurvttkj6ygp3kv5zlnf.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381508928",
     "title": "Pomegranites-MEDRES-1-scaled",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381508/gallery/v5p3qqvzgjorprdmua4n.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381512808",
     "title": "BabyPomeMEDRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381512/gallery/uxiz9xtanxybjhmqmlym.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381516785",
     "title": "AppleSoloMEDRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381516/gallery/grxhuc3mgpsnercqkl75.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381520754",
     "title": "CutApplesMEDRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381520/gallery/svid98nu6p5g1xyiak6y.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381524978",
     "title": "PomegranitesArielsMEDRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381524/gallery/qmtmx1jbsnepp046skxf.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381529068",
     "title": "EucalyptBlossomBeeMEDRES-1",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381528/gallery/mbqdt5tztfoiws91uii0.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381533322",
     "title": "ApricotBlossomBeeMEDRES-1",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381532/gallery/azyreqoi660gp6ppejfu.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   },
   {
     "id": "g1785381537344",
     "title": "RedFloweringBlossomBeeMEDRES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381536/gallery/dtrq76iud4eutr9u7efw.jpg",
-    "category": "Landscape",
-    "featured": false
+    "featured": false,
+    "categories": [
+      "Landscape"
+    ]
   }
 ]
