@@ -348,7 +348,7 @@ nav ul a:hover {
   .image-grid {
     column-count: 1;
   }
-  
+
   .gallery-item {
     margin-bottom: 0.8rem;
   }
@@ -512,7 +512,7 @@ main {
     column-gap: 1rem;
     margin-top: 2rem;
   }
-  
+
   .shop-item {
     margin-bottom: 1rem;
   }
@@ -522,7 +522,7 @@ main {
   .shop-grid {
     column-count: 1;
   }
-  
+
   .shop-item {
     margin-bottom: 0.8rem;
   }
