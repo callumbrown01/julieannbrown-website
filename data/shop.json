@@ -1,12 +1,452 @@
 [
   {
-    "id": "s1785308431591",
-    "title": "testitem",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785308430/shop/acrfs978l2i34vze18pp.png",
-    "price": 1,
-    "medium": "eeerfg",
+    "id": "s1785381539474",
+    "title": "Strawberry Duo",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381539/shop/dqwgn2tjd99msfxb9xfv.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2025 | 20 x 20 x 4cm",
     "sold": false,
-    "stripeLink": "https://buy.stripe.com/6oU14nb4o3ZH2zk6uV2go00",
+    "stripeLink": "",
     "order": 0
+  },
+  {
+    "id": "s1785381541687",
+    "title": "Strawberries in Silver",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381541/shop/y11xsrpnjgw51znbodd9.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2025 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 1
+  },
+  {
+    "id": "s1785381544141",
+    "title": "Strawberry Bowl",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381543/shop/ssnsiddd7iu8jhi7syas.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 2
+  },
+  {
+    "id": "s1785381546367",
+    "title": "Grapes in Silver",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381545/shop/pg7krxo7z7t3eajmcia3.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2025 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 3
+  },
+  {
+    "id": "s1785381548656",
+    "title": "Grape bunch",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381548/shop/zftfxfynd0lvjwdoksho.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2025 | 20 x 20 x 4cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 4
+  },
+  {
+    "id": "s1785381550902",
+    "title": "Apple Bowl",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381550/shop/nhbmbi7ubrgu1dupfvaz.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 5
+  },
+  {
+    "id": "s1785381552996",
+    "title": "Baby Pome",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381552/shop/ouaqfmiklrq8rvzv9u9q.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 25 x 25 x 5.5d cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 6
+  },
+  {
+    "id": "s1785381555172",
+    "title": "Apple Solo",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381554/shop/ztpnrxsptuvb2rxuwbjt.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 25 x 25 x 5.5d cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 7
+  },
+  {
+    "id": "s1785381557246",
+    "title": "Cut Apples",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381556/shop/baopmws5adtqlapterdp.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 8
+  },
+  {
+    "id": "s1785381559694",
+    "title": "Pomegranate and Ariels",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381559/shop/xl8598vnthq5zgbkwp9d.jpg",
+    "price": 36.0,
+    "medium": "Fruit Collection | Oil on Canvas | 2024 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 9
+  },
+  {
+    "id": "s1785381561710",
+    "title": "Pomegranates on striped board",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381561/shop/sayp0ofqgvmjvjmjsm9a.jpg",
+    "price": 36.0,
+    "medium": "Pomegranites on striped board | Fruit Collection | Oil on Canvas | 2023 | 30 x 25cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 10
+  },
+  {
+    "id": "s1785381563770",
+    "title": "Lemons on striped board",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381563/shop/cmhshm7qnykaunb5m3t2.jpg",
+    "price": 36.0,
+    "medium": "Lemons on striped board | Fruit Collection | Oil on Canvas | 2024 | 92 x 46cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 11
+  },
+  {
+    "id": "s1785381565982",
+    "title": "Eucalypt Blossom Bee",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381565/shop/hb1dq8fb3p8ogwguhauo.jpg",
+    "price": 36.0,
+    "medium": "Eucalypt Bee | Botanicals Collection | Oil on Canvas | 2024 | 25 x 25 cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 12
+  },
+  {
+    "id": "s1785381568221",
+    "title": "Apricot Blossom Bee",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381567/shop/n1squc9mvgaiekidspq8.jpg",
+    "price": 36.0,
+    "medium": "Apricot Blossom Bee | Botanicals Collection | Oil on Canvas | 2024 | 25 x 25 cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 13
+  },
+  {
+    "id": "s1785381570591",
+    "title": "Red Flowering Blossom Bee",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381570/shop/bgcpsde2u0hl9nyqdyaa.jpg",
+    "price": 36.0,
+    "medium": "Red Flowering Blossom Bee | Botanicals Collection | Oil on Canvas | 2024 | 25 x 25 cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 14
+  },
+  {
+    "id": "s1785381572899",
+    "title": "Stillwater",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381572/shop/gw5juwrbiopbpj4ehzkh.jpg",
+    "price": 36.0,
+    "medium": "Waterdance Collection \nOil on Canvas | 2013 | 41 x 92cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 15
+  },
+  {
+    "id": "s1785381575293",
+    "title": "Tahitian Blue",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381574/shop/bppinc8vrncnf8s6uzvq.jpg",
+    "price": 36.0,
+    "medium": "",
+    "sold": false,
+    "stripeLink": "",
+    "order": 16
+  },
+  {
+    "id": "s1785381577706",
+    "title": "Little Parakeet Pitstop",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381577/shop/uz3e82datsghotyhnokz.jpg",
+    "price": 36.0,
+    "medium": "Lifescapes Collection \nOil on Canvas | 2011 | 64 x 89cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 17
+  },
+  {
+    "id": "s1785381580012",
+    "title": "Billabong",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381579/shop/cjgnepka0nvzsokaauc7.jpg",
+    "price": 36.0,
+    "medium": "Waterdance Collection \nOil on Belgian Linen | 2016 | 150 x 100cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 18
+  },
+  {
+    "id": "s1785381582301",
+    "title": "Billabong",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381581/shop/vnudtfa1rdewhbebdzim.jpg",
+    "price": 36.0,
+    "medium": "",
+    "sold": false,
+    "stripeLink": "",
+    "order": 19
+  },
+  {
+    "id": "s1785381585453",
+    "title": "Python Pool",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381584/shop/bwaalqoxklaspfdaszro.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2022 | 122 x 61cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 20
+  },
+  {
+    "id": "s1785381587884",
+    "title": "Just flyin&#8217; by",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381587/shop/tuwphbimvgwxymgbbi4b.jpg",
+    "price": 36.0,
+    "medium": "Climate Collection | \nOil on Canvas | 2019 | 91 x 76cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 21
+  },
+  {
+    "id": "s1785381590107",
+    "title": "Vineyard",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381589/shop/thgqw2vu0rwkk7yd05sl.jpg",
+    "price": 36.0,
+    "medium": "Lifescapes Collection \nOil on Canvas | 2010 | 81 x 66cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 22
+  },
+  {
+    "id": "s1785381592646",
+    "title": "Cathedral Rocks",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381592/shop/qjpgkyd4msozwweupypa.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2019 | 51 x 51cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 23
+  },
+  {
+    "id": "s1785381594955",
+    "title": "Boranup Illuminated",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381594/shop/xqod25vzw89tvht4qlop.jpg",
+    "price": 36.0,
+    "medium": "Lifescapes Collection \nOil on Canvas | 2010 | 95 x 75cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 24
+  },
+  {
+    "id": "s1785381597415",
+    "title": "Silent Sentinel",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381596/shop/e66ticgzuymgpuuxre4q.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2014 | 41 x 92cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 25
+  },
+  {
+    "id": "s1785381599689",
+    "title": "Indjinup",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381599/shop/vkaufvuznlgkegnayxij.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2015 | 100 x 70cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 26
+  },
+  {
+    "id": "s1785381602003",
+    "title": "Golden River Girl",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381601/shop/xzj1mnvyodjghh6dzccu.jpg",
+    "price": 36.0,
+    "medium": "Waterdance Collection \nOil on Canvas | 2015 | 60 x 90cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 27
+  },
+  {
+    "id": "s1785381604074",
+    "title": "Portrait of Belinda Long",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381603/shop/xmmvucccnqopeete9xmv.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2021 | 45 x 55cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 28
+  },
+  {
+    "id": "s1785381606319",
+    "title": "Genevieve",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381605/shop/czjyen7ycckzxpyupygs.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2023 | 75 x 100cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 29
+  },
+  {
+    "id": "s1785381608489",
+    "title": "Jack",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381608/shop/ao3rjhmqkuab98h59lx6.jpg",
+    "price": 0,
+    "medium": "Oil on Belgian Linen | 2021 | 65 x 85cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 30
+  },
+  {
+    "id": "s1785381610778",
+    "title": "Mia",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381610/shop/gzi3lldr2nvfvvt60zf1.jpg",
+    "price": 0,
+    "medium": "Oil on Belgian Linen | 2021 | 65 x 85cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 31
+  },
+  {
+    "id": "s1785381612958",
+    "title": "Sam",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381612/shop/ydfdo9apcctrg0woji7w.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2024 | 50 x 76cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 32
+  },
+  {
+    "id": "s1785381615597",
+    "title": "The Way to Salmon Bay",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381615/shop/nkxbxxjs4xs4fksqoffo.png",
+    "price": 36.0,
+    "medium": "Waterdance Collection \nOil on Canvas | 2014 | 62 x 90cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 33
+  },
+  {
+    "id": "s1785381617634",
+    "title": "Julia",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381617/shop/keyxkazlocd8emzqj0he.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2020 | 76 x 102cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 34
+  },
+  {
+    "id": "s1785381619922",
+    "title": "Doug and his Dog (Yogi)",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381619/shop/uuthacb6ipf4pjkjcrel.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas Board | 2012 | 45 x 55cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 35
+  },
+  {
+    "id": "s1785381622239",
+    "title": "Waterdance",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381621/shop/tgl7srog2r43qvi3oapy.jpg",
+    "price": 36.0,
+    "medium": "Waterdance Collection \nOil on Belgian Linen | 2016 | 150 x 100cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 36
+  },
+  {
+    "id": "s1785381624620",
+    "title": "Dark Water",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381623/shop/hafaaqpgbkmddfddm15q.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2020 | 150 x 150cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 37
+  },
+  {
+    "id": "s1785381626990",
+    "title": "The Burden of Expectation",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381626/shop/zpiaszo5adqyvjs2yiig.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas Board | 2019 | 45 x 55cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 38
+  },
+  {
+    "id": "s1785381629284",
+    "title": "Lily",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381628/shop/pvqs0njqrjm0qa4oll49.jpg",
+    "price": 0,
+    "medium": "Oil on Belgian Linen | 2021 | 65 x 85cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 39
+  },
+  {
+    "id": "s1785381631728",
+    "title": "Smile",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381631/shop/pxq5flq2crsjyagxnbjy.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2012 | 77 x 56cm (framed)",
+    "sold": false,
+    "stripeLink": "",
+    "order": 40
+  },
+  {
+    "id": "s1785381634033",
+    "title": "Charli",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381633/shop/tkuybratntnvvfbkn4oi.jpg",
+    "price": 0,
+    "medium": "Oil on Canvas | 2020 | 76 x 76cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 41
+  },
+  {
+    "id": "s1785381636380",
+    "title": "Children of the Grandaddy Fig Tree",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381635/shop/uzw9xndtsegopopxckzy.jpg",
+    "price": 0,
+    "medium": "",
+    "sold": false,
+    "stripeLink": "",
+    "order": 42
+  },
+  {
+    "id": "s1785381638611",
+    "title": "Children of the Grandaddy Fig Tree",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381638/shop/n0ivkmzshutbg7aackxa.jpg",
+    "price": 36.0,
+    "medium": "Oil on Canvas | 2013 | 78 x 103cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 43
+  },
+  {
+    "id": "s1785381640854",
+    "title": "Coming in to Land",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381640/shop/b4nuhi2y3hifemqmbrvc.jpg",
+    "price": 36.0,
+    "medium": "Lifescapes Collection \nOil on Canvas | 2011 | 77 x 61cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 44
   }
 ]
