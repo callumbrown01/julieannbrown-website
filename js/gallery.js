@@ -24,7 +24,7 @@
       // Create container for maintaining aspect ratio
       const container = document.createElement('div');
       container.className = 'gallery-item';
-      
+
       // Set aspect ratio if dimensions available
       if (item.dimensions && item.dimensions.width && item.dimensions.height) {
         const aspectRatio = item.dimensions.width / item.dimensions.height;
@@ -33,12 +33,12 @@
         // Default aspect ratio if no dimensions
         container.style.aspectRatio = '1';
       }
-      
+
       const img = document.createElement('img');
       img.src = item.src;
       img.alt = item.title;
       img.title = item.title;
-      
+
       container.appendChild(img);
       grid.appendChild(container);
     });
