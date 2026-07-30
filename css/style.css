@@ -277,6 +277,7 @@ nav ul a:hover {
   max-width: 1400px;
   margin: 4rem auto;
   padding: 0 1.5rem;
+  display: none;
 }
 
 .featured h2 {
@@ -285,8 +286,9 @@ nav ul a:hover {
   font-weight: normal;
 }
 
+/* ─── Masonry Gallery Grid ─── */
 .image-grid {
-  column-count: 4;
+  column-count: 5;
   column-gap: 1.5rem;
   column-fill: balance;
 }
@@ -300,24 +302,31 @@ nav ul a:hover {
   background: #f5f5f5;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   animation: slideUp 0.6s ease-out;
 }
 
 .gallery-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .image-grid img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   background: #f5f5f5;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+  .image-grid {
+    column-count: 4;
+    column-gap: 1.3rem;
+  }
+}
+
+@media (max-width: 1000px) {
   .image-grid {
     column-count: 3;
     column-gap: 1.2rem;
@@ -339,6 +348,10 @@ nav ul a:hover {
   .image-grid {
     column-count: 1;
   }
+  
+  .gallery-item {
+    margin-bottom: 0.8rem;
+  }
 }
 
 /* ─── Page Title ─── */
@@ -348,6 +361,7 @@ nav ul a:hover {
   font-weight: normal;
   margin: 3.5rem 0 0.5rem;
   letter-spacing: -0.02em;
+  animation: slideDown 0.6s ease-out;
 }
 
 .page-subtitle {
@@ -356,6 +370,7 @@ nav ul a:hover {
   margin-bottom: 3rem;
   font-size: 1rem;
   font-weight: 300;
+  animation: slideUp 0.6s ease-out 0.1s both;
 }
 
 /* ─── Gallery ─── */
@@ -371,6 +386,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   margin: 2rem 0 3rem;
+  animation: slideUp 0.6s ease-out 0.2s both;
 }
 
 .filter-btn {
@@ -389,6 +405,7 @@ main {
 .filter-btn:hover {
   border-color: #2c2c2c;
   color: #2c2c2c;
+  transform: translateY(-2px);
 }
 
 .filter-btn.active {
@@ -399,9 +416,9 @@ main {
 
 /* ─── Shop ─── */
 .shop-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
+  column-count: 4;
+  column-gap: 1.5rem;
+  column-fill: balance;
   margin-top: 3rem;
 }
 
@@ -409,9 +426,11 @@ main {
   background: #fff;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: slideUp 0.6s ease-out;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
 }
 
 .shop-item:hover {
@@ -426,7 +445,7 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .shop-item img {
@@ -473,17 +492,39 @@ main {
   display: inline-block;
 }
 
+@media (max-width: 1400px) {
+  .shop-grid {
+    column-count: 3;
+    column-gap: 1.3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .shop-grid {
+    column-count: 2;
+    column-gap: 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    column-count: 2;
+    column-gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .shop-item {
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .shop-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    column-count: 1;
+  }
+  
+  .shop-item {
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -502,18 +543,27 @@ main {
 }
 
 .about-image img {
-  border-radius: 6px;
+  border-radius: 2px;
   width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.6s ease-out;
+}
+
+.about-text {
+  animation: slideUp 0.6s ease-out 0.1s both;
 }
 
 .about-text h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.01em;
 }
 
 .about-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #444;
+  line-height: 1.8;
 }
 
 /* ─── Contact ─── */
@@ -521,6 +571,13 @@ main {
   max-width: 600px;
   margin: 4rem auto;
   padding: 0 2rem;
+  animation: slideUp 0.6s ease-out;
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .contact-form {
@@ -535,6 +592,21 @@ main {
   flex-direction: column;
   gap: 0.3rem;
   font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2c2c2c;
 }
 
 .contact-form input,

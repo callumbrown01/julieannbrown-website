@@ -10,18 +10,8 @@
     const card = document.createElement('div');
     card.className = 'shop-item';
 
-    // Create image wrapper with aspect ratio
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'shop-item-image';
-
-    // Set aspect ratio if dimensions available
-    if (item.dimensions && item.dimensions.width && item.dimensions.height) {
-      const aspectRatio = item.dimensions.width / item.dimensions.height;
-      imgWrapper.style.aspectRatio = aspectRatio.toString();
-    } else {
-      // Default aspect ratio if no dimensions
-      imgWrapper.style.aspectRatio = '1';
-    }
 
     const img = document.createElement('img');
     img.src = item.src;

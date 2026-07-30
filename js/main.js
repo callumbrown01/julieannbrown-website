@@ -23,25 +23,4 @@
       slides[currentSlide].classList.add('active');
     }, 5000);
   }
-
-  // Featured grid
-  const grid = document.getElementById('featured-grid');
-  if (grid) {
-    const featured = galleryItems.filter(item => item.featured).slice(0, 12);
-    const items = featured.length > 0 ? featured : galleryItems.slice(0, 12);
-
-    items.forEach(item => {
-      const container = document.createElement('div');
-      container.className = 'gallery-item';
-      if (item.dimensions?.width && item.dimensions?.height) {
-        const aspectRatio = item.dimensions.width / item.dimensions.height;
-        container.style.aspectRatio = aspectRatio.toString();
-      }
-      const img = document.createElement('img');
-      img.src = item.src;
-      img.alt = item.title;
-      container.appendChild(img);
-      grid.appendChild(container);
-    });
-  }
 })();
