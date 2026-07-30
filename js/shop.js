@@ -2,7 +2,7 @@
   const res = await fetch('data/shop.json');
   const allItems = await res.json();
   const grid = document.getElementById('shop-grid');
-  
+
   // Filter out items with $0 price
   const items = allItems.filter(item => item.price && item.price > 0);
 
