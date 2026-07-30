@@ -15,7 +15,12 @@ body {
   letter-spacing: 0.3px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Georgia', serif;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -209,6 +214,7 @@ nav ul a:hover {
     column-count: 2;
     column-gap: 1rem;
   }
+
   .gallery-item {
     margin-bottom: 1rem;
   }
