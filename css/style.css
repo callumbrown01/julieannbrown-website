@@ -13,6 +13,9 @@ body {
   background: #fafafa;
   line-height: 1.6;
   letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -45,24 +48,27 @@ header {
   z-index: 100;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.95);
+  padding-top: max(1.2rem, env(safe-area-inset-top));
 }
 
 nav {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.2rem 2rem;
+  padding-left: max(2rem, env(safe-area-inset-left));
+  padding-right: max(2rem, env(safe-area-inset-right));
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #1a1a1a;
-  font-family: 'Georgia', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 nav ul {
@@ -78,11 +84,18 @@ nav ul a {
   transition: color 0.3s, opacity 0.3s;
   opacity: 0.7;
   color: #1a1a1a;
+  padding: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 nav ul a:hover {
   opacity: 1;
   color: #8b7355;
+}
+
+/* Hide Shop link */
+nav ul li:nth-child(4) {
+  display: none;
 }
 
 /* ─── Buttons ─── */
@@ -98,7 +111,13 @@ nav ul a:hover {
   transition: all 0.3s ease;
   border: 1px solid #2c2c2c;
   cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
+
 
 .btn:hover {
   background: #fff;
@@ -264,6 +283,11 @@ nav ul a:hover {
   transition: all 0.4s ease;
   display: inline-block;
   text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-transparent:hover {
@@ -291,6 +315,8 @@ nav ul a:hover {
   column-count: 5;
   column-gap: 1.5rem;
   column-fill: balance;
+  width: 100%;
+  padding: 0 1.5rem 4rem;
 }
 
 .gallery-item {
@@ -362,6 +388,7 @@ nav ul a:hover {
   margin: 3.5rem 0 0.5rem;
   letter-spacing: -0.02em;
   animation: slideDown 0.6s ease-out;
+  padding: 0 1.5rem;
 }
 
 .page-subtitle {
@@ -375,9 +402,14 @@ nav ul a:hover {
 
 /* ─── Gallery ─── */
 main {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
+}
+
+main:not(.about-page):not(.contact-page):not(.workshops-container) {
+  max-width: 100%;
+  padding: 0;
 }
 
 .filters {
@@ -387,6 +419,7 @@ main {
   flex-wrap: wrap;
   margin: 2rem 0 3rem;
   animation: slideUp 0.6s ease-out 0.2s both;
+  padding: 0 1.5rem;
 }
 
 .filter-btn {
@@ -400,6 +433,11 @@ main {
   text-transform: uppercase;
   transition: all 0.3s ease;
   color: #888;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .filter-btn:hover {
@@ -530,34 +568,40 @@ main {
 
 /* ─── About ─── */
 .about-page {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
 }
 
-.about-image img {
-  border-radius: 2px;
+.about-image-strip {
   width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
+.about-image-strip img {
+  border-radius: 0;
+  width: 100%;
+  box-shadow: none;
   animation: slideUp 0.6s ease-out;
+  display: block;
 }
 
 .about-text {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
   animation: slideUp 0.6s ease-out 0.1s both;
 }
 
 .about-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  letter-spacing: -0.01em;
+  display: none;
 }
 
 .about-text p {
@@ -596,26 +640,19 @@ main {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 2px;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #2c2c2c;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 1rem;
-  font-family: inherit;
 }
 
 /* ─── Admin ─── */
@@ -759,6 +796,9 @@ main {
   font-weight: 500;
   transition: background 0.2s;
   margin-top: 1rem;
+  min-height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .btn-enrol:hover:not(:disabled) {
@@ -789,6 +829,7 @@ main {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .modal.hidden {
@@ -841,6 +882,9 @@ main {
   border-radius: 3px;
   font-size: 1rem;
   font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 44px;
 }
 
 .form-group input:focus,
@@ -864,6 +908,9 @@ main {
   font-size: 1rem;
   font-weight: 500;
   transition: background 0.2s;
+  min-height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .btn-enrol-submit:hover {
@@ -923,6 +970,11 @@ main {
   cursor: pointer;
   font-size: 0.85rem;
   transition: background 0.2s;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-small:hover {
@@ -942,11 +994,13 @@ main {
 footer {
   text-align: center;
   padding: 3rem 2rem;
+  padding-left: max(2rem, env(safe-area-inset-left));
+  padding-right: max(2rem, env(safe-area-inset-right));
+  padding-bottom: max(3rem, env(safe-area-inset-bottom));
   background: #1a1a1a;
   color: #ccc;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
-  margin-top: 5rem;
   animation: slideUp 1s ease-out;
 }
 
@@ -1039,5 +1093,4 @@ footer p {
 
 .hero-text {
   padding: 2rem;
-}
 }
