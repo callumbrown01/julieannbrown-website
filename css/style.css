@@ -48,7 +48,11 @@ header {
   z-index: 100;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.95);
-  padding-top: max(1.2rem, env(safe-area-inset-top));
+  padding-top: max(1.0rem, env(safe-area-inset-top));
+  padding-bottom: 1.0rem;
+  /* Increase from implicit 0 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow below */
 }
 
 nav {
@@ -63,9 +67,9 @@ nav {
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #1a1a1a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;

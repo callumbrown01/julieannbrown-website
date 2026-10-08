@@ -46,7 +46,6 @@ function renderWorkshops() {
         <p class="workshop-date"><strong>Date:</strong> ${formatDate(workshop.date)}</p>
         <p class="workshop-time"><strong>Time:</strong> ${workshop.time} (${workshop.duration})</p>
         <p class="workshop-description">${workshop.description}</p>
-        <p class="workshop-spots"><strong>Spots available:</strong> ${Math.max(0, spotsLeft)} / ${workshop.maxSlots}</p>
         ${workshop.multiDay ? `<p class="workshop-multiday"><strong>Duration:</strong> ${workshop.daysAvailable} days available</p>` : ''}
         <button 
           class="btn-enrol ${isFull ? 'disabled' : ''}" 
