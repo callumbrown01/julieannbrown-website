@@ -76,10 +76,10 @@ nav {
 }
 
 .nav-logo-icon {
-  height: 2.5rem;
-  width: 2.5rem;
-  object-fit: contain;
-  transition: opacity 0.3s;
+  height: 6rem;
+  width: 6rem;
+  max-width: 6rem;
+  max-height: 6rem;
 }
 
 .logo-container:hover .nav-logo-icon {
@@ -178,6 +178,10 @@ nav {
   .nav-logo-icon {
     height: 6rem;
     width: 6rem;
+    max-width: 6rem;
+    max-height: 6rem;
+    object-fit: contain;
+    transition: opacity 0.3s;
   }
 }
 
@@ -210,8 +214,8 @@ nav {
   }
 
   .nav-logo-icon {
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 6rem;
   }
 }
 
