@@ -3,11 +3,28 @@
 // Uses GitHub PAT stored as repository secret in Netlify
 
 exports.handler = async (event) => {
+  // CORS headers
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  };
+
+  // Handle OPTIONS preflight request
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers,
+      body: ''
+    };
+  }
+
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
@@ -18,7 +35,7 @@ exports.handler = async (event) => {
     if (!file) {
       return {
         statusCode: 400,
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ error: 'Missing file parameter' })
       };
     }
@@ -28,7 +45,7 @@ exports.handler = async (event) => {
     if (!githubToken) {
       return {
         statusCode: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ error: 'GitHub token not configured. Please provide a GitHub PAT.' })
       };
     }
@@ -49,7 +66,7 @@ exports.handler = async (event) => {
     if (!response.ok) {
       return {
         statusCode: response.status,
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ error: `GitHub API error: ${response.statusText}` })
       };
     }
@@ -59,7 +76,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({
         data: content,
         sha: data.sha
@@ -68,7 +85,7 @@ exports.handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ error: error.message })
     };
   }
