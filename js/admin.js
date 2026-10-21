@@ -455,24 +455,6 @@ async function saveChanges() {
   }
 }
 
-async function saveFile(file, data) {
-  const res = await fetch(`${API_BASE}/github-save`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      file,
-      data,
-      password: adminPassword,
-      token: githubPAT
-    })
-  });
-
-  if (!res.ok) {
-    const error = await res.json();
-    throw new Error(error.error || `HTTP ${res.status}`);
-  }
-}
-
 // ─── SHOP ─────────────────────────────────────────────────────────
 async function uploadShopItem() {
   const file = document.getElementById('shop-file').files[0];
@@ -684,9 +666,28 @@ async function saveFile(file, data) {
   });
 
   if (!res.ok) {
-    const error = await res.json();
-    throw new Error(error.error || `HTTP ${res.status}`);
+    let errorMessage = `HTTP ${res.status}`;
+    try {
+      const contentType = res.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const error = await res.json();
+        errorMessage = error.error || errorMessage;
+      } else {
+        const text = await res.text();
+        errorMessage = text.substring(0, 200) || errorMessage;
+      }
+    } catch (e) {
+      console.error('Could not parse error response:', e);
+    }
+    throw new Error(errorMessage);
   }
+
+  const contentType = res.headers.get('content-type');
+  if (!contentType || !contentType.includes('application/json')) {
+    throw new Error('Invalid response format: expected JSON');
+  }
+
+  return await res.json();
 }
 
 // ─── GITHUB TOKEN MANAGEMENT ──────────────────────────────────────

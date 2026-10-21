@@ -4,23 +4,51 @@
 
   // Slideshow on hero
   const slidesContainer = document.querySelector('.slides');
+  const thumbnailsContainer = document.querySelector('.slideshow-thumbnails');
+
   if (slidesContainer && galleryItems.length > 0) {
     let currentSlide = 0;
+    const slidesToShow = galleryItems.slice(0, 8);
 
-    // Create slide elements
-    galleryItems.slice(0, 8).forEach((item, index) => {
+    // Create slide elements and thumbnails
+    slidesToShow.forEach((item, index) => {
+      // Create slide
       const slide = document.createElement('div');
       slide.className = `slide ${index === 0 ? 'active' : ''}`;
       slide.innerHTML = `<img src="${item.src}" alt="${item.title}" />`;
       slidesContainer.appendChild(slide);
+
+      // Create thumbnail
+      const thumbnail = document.createElement('div');
+      thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+      thumbnail.innerHTML = `<img src="${item.src}" alt="${item.title}" />`;
+      thumbnail.addEventListener('click', () => goToSlide(index));
+      thumbnailsContainer.appendChild(thumbnail);
     });
+
+    function goToSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      slides[currentSlide].classList.remove('active');
+      thumbnails[currentSlide].classList.remove('active');
+
+      currentSlide = index;
+
+      slides[currentSlide].classList.add('active');
+      thumbnails[currentSlide].classList.add('active');
+    }
 
     // Auto-rotate slides every 5 seconds
     setInterval(() => {
       const slides = document.querySelectorAll('.slide');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
       slides[currentSlide].classList.remove('active');
+      thumbnails[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
+      thumbnails[currentSlide].classList.add('active');
     }, 5000);
   }
 })();

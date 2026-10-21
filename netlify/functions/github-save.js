@@ -17,6 +17,7 @@ exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
@@ -27,6 +28,7 @@ exports.handler = async (event) => {
     if (!file || !data) {
       return {
         statusCode: 400,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: 'Missing file or data parameter' })
       };
     }
@@ -36,6 +38,7 @@ exports.handler = async (event) => {
     if (passwordHash !== ADMIN_PASSWORD_HASH) {
       return {
         statusCode: 401,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: 'Unauthorized: Invalid password' })
       };
     }
@@ -45,6 +48,7 @@ exports.handler = async (event) => {
     if (!githubToken) {
       return {
         statusCode: 500,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: 'GitHub token not configured. Please provide a GitHub PAT.' })
       };
     }
@@ -66,6 +70,7 @@ exports.handler = async (event) => {
     if (!getResponse.ok) {
       return {
         statusCode: getResponse.status,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: `Could not fetch current file: ${getResponse.statusText}` })
       };
     }
@@ -94,17 +99,20 @@ exports.handler = async (event) => {
     if (!saveResponse.ok) {
       return {
         statusCode: saveResponse.status,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: `Could not save file: ${saveResponse.statusText}` })
       };
     }
 
     return {
       statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ success: true })
     };
   } catch (error) {
     return {
       statusCode: 500,
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ error: error.message })
     };
   }
