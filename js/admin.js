@@ -21,12 +21,12 @@ async function checkLogin() {
   const pat = document.getElementById('pat-input').value;
   const pwd = document.getElementById('pwd-input').value;
   const hash = await sha256(pwd);
-  
+
   if (!pat.trim()) {
     document.getElementById('login-error').textContent = 'GitHub PAT is required.';
     return;
   }
-  
+
   if (hash === ADMIN_PASSWORD_HASH) {
     githubPAT = pat;
     adminPassword = pwd;
@@ -103,44 +103,44 @@ async function uploadGalleryImage() {
   const title = document.getElementById('gallery-title').value;
   const categorySelect = document.getElementById('gallery-category');
   const featured = document.getElementById('gallery-featured').checked;
-  
+
   // Get selected categories (even though it's single select in this context)
   const categories = Array.from(categorySelect.selectedOptions).map(opt => opt.value).filter(v => v);
-  
+
   if (!file || !title) return alert('Please select a file and enter a title.');
   if (categories.length === 0) return alert('Please select at least one category.');
-  
+
   const url = await uploadToCloudinary(file, 'gallery');
-  galleryData.push({ 
-    id: 'g' + Date.now(), 
-    title, 
-    src: url, 
-    categories: categories, 
+  galleryData.push({
+    id: 'g' + Date.now(),
+    title,
+    src: url,
+    categories: categories,
     featured: featured,
     order: galleryData.length
   });
-  
+
   // Clear form
   document.getElementById('gallery-file').value = '';
   document.getElementById('gallery-title').value = '';
   document.getElementById('gallery-category').value = '';
   document.getElementById('gallery-featured').checked = false;
-  
+
   renderAdminGallery();
 }
 
 function renderAdminGallery() {
   const list = document.getElementById('gallery-admin-list');
   list.innerHTML = '';
-  
+
   galleryData.forEach((item, i) => {
     const div = document.createElement('div');
     div.className = 'admin-thumb';
     div.draggable = true;
     div.dataset.index = i;
-    
+
     const categories = Array.isArray(item.categories) ? item.categories.join(', ') : item.categories || 'No category';
-    
+
     div.innerHTML = `
       <span class="drag-handle">⠿</span>
       <img src="${item.src}" alt="${item.title}" title="${item.title}" />
@@ -152,28 +152,28 @@ function renderAdminGallery() {
         <button class="remove-btn" onclick="removeGalleryItem(${i})">×</button>
       </div>
     `;
-    
+
     div.addEventListener('dragstart', e => {
       e.dataTransfer.effectAllowed = 'move';
       e.dataTransfer.setData('text/plain', i);
     });
-    
+
     div.addEventListener('dragover', e => {
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
       div.style.opacity = '0.7';
     });
-    
+
     div.addEventListener('dragleave', e => {
       div.style.opacity = '1';
     });
-    
+
     div.addEventListener('drop', e => {
       e.preventDefault();
       div.style.opacity = '1';
       const from = parseInt(e.dataTransfer.getData('text/plain'));
       const to = i;
-      
+
       if (from !== to) {
         const moved = galleryData.splice(from, 1)[0];
         galleryData.splice(to, 0, moved);
@@ -181,7 +181,7 @@ function renderAdminGallery() {
         renderAdminGallery();
       }
     });
-    
+
     list.appendChild(div);
   });
 }
@@ -189,20 +189,20 @@ function renderAdminGallery() {
 function editGalleryItem(i) {
   editingGalleryIndex = i;
   const item = galleryData[i];
-  
+
   // Populate modal with current data
   document.getElementById('modal-gallery-preview').src = item.src;
   document.getElementById('modal-gallery-title').value = item.title;
   document.getElementById('modal-gallery-featured').checked = item.featured || false;
-  
+
   // Set categories in multi-select
   const categorySelect = document.getElementById('modal-gallery-categories');
   const itemCategories = Array.isArray(item.categories) ? item.categories : [item.categories || ''];
-  
+
   Array.from(categorySelect.options).forEach(option => {
     option.selected = itemCategories.includes(option.value);
   });
-  
+
   // Show modal
   document.getElementById('edit-gallery-modal').style.display = 'block';
 }
@@ -217,27 +217,27 @@ function saveEditGalleryImage() {
     alert('Error: No image selected for editing.');
     return;
   }
-  
+
   const title = document.getElementById('modal-gallery-title').value;
   const categorySelect = document.getElementById('modal-gallery-categories');
   const categories = Array.from(categorySelect.selectedOptions).map(opt => opt.value);
   const featured = document.getElementById('modal-gallery-featured').checked;
-  
+
   if (!title) {
     alert('Please enter a title.');
     return;
   }
-  
+
   if (categories.length === 0) {
     alert('Please select at least one category.');
     return;
   }
-  
+
   // Update the gallery item
   galleryData[editingGalleryIndex].title = title;
   galleryData[editingGalleryIndex].categories = categories;
   galleryData[editingGalleryIndex].featured = featured;
-  
+
   closeEditGalleryModal();
   renderAdminGallery();
 }
@@ -250,7 +250,7 @@ function removeGalleryItem(i) {
 }
 
 // Close modal when clicking outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   const modal = document.getElementById('edit-gallery-modal');
   if (event.target === modal) {
     closeEditGalleryModal();
