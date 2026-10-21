@@ -22,7 +22,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { file, data, password } = JSON.parse(event.body);
+    const { file, data, password, token } = JSON.parse(event.body);
 
     if (!file || !data) {
       return {
@@ -40,11 +40,12 @@ exports.handler = async (event) => {
       };
     }
 
-    const githubToken = process.env.GITHUB_TOKEN;
+    // Use provided token, fall back to environment variable
+    const githubToken = token || process.env.GITHUB_TOKEN;
     if (!githubToken) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'GitHub token not configured' })
+        body: JSON.stringify({ error: 'GitHub token not configured. Please provide a GitHub PAT.' })
       };
     }
 

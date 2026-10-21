@@ -158,6 +158,7 @@ nav {
   height: 1.25rem;
   stroke-linecap: round;
   stroke-linejoin: round;
+  object-fit: contain;
 }
 
 /* Hide Shop link */
@@ -604,15 +605,15 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  min-height: 200px;
+  aspect-ratio: auto;
 }
 
 .shop-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  padding: 1rem;
+  padding: 0;
 }
 
 .shop-item-info {
@@ -797,6 +798,13 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .admin-thumb {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
 }
 
 .admin-thumb img {
@@ -819,6 +827,17 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
+}
+
+.admin-thumb .drag-handle {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  background: rgba(255,255,255,0.9);
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: grab;
+  font-size: 1rem;
 }
 
 /* ─── Workshops ─── */

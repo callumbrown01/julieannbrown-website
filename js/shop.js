@@ -13,6 +13,12 @@
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'shop-item-image';
 
+    // Set aspect ratio if dimensions are available
+    if (item.dimensions && item.dimensions.width && item.dimensions.height) {
+      const aspectRatio = item.dimensions.width / item.dimensions.height;
+      imgWrapper.style.aspectRatio = aspectRatio;
+    }
+
     const img = document.createElement('img');
     img.src = item.src;
     img.alt = item.title;
