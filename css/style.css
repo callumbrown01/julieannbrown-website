@@ -162,11 +162,6 @@ nav {
   object-fit: contain;
 }
 
-/* Hide Shop link */
-.nav-menu li:nth-child(4) {
-  display: none;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .nav-menu {
@@ -228,14 +223,14 @@ nav {
 .btn {
   display: inline-block;
   padding: 0.7rem 1.8rem;
-  background: #2c2c2c;
+  background: #31729b;
   color: #fff;
   border-radius: 2px;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  border: 1px solid #2c2c2c;
+  border: 1px solid #31729b;
   cursor: pointer;
   min-height: 44px;
   display: flex;
@@ -247,18 +242,18 @@ nav {
 
 .btn:hover {
   background: #fff;
-  color: #2c2c2c;
+  color: #31729b;
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid #2c2c2c;
-  color: #2c2c2c;
+  border: 1px solid #31729b;
+  color: #31729b;
   margin-left: 1rem;
 }
 
 .btn-outline:hover {
-  background: #2c2c2c;
+  background: #31729b;
   color: #fff;
 }
 
@@ -597,23 +592,25 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .filter-btn:hover {
-  border-color: #2c2c2c;
-  color: #2c2c2c;
+  border-color: #31729b;
+  color: #31729b;
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: #2c2c2c;
+  background: #31729b;
   color: #fff;
-  border-color: #2c2c2c;
+  border-color: #31729b;
 }
 
 /* ─── Shop ─── */
 .shop-grid {
-  column-count: 4;
+  column-count: 2;
   column-gap: 1.5rem;
   column-fill: balance;
   margin-top: 3rem;
+  width: 100%;
+  padding: 0 1.5rem 4rem;
 }
 
 .shop-item {
@@ -634,18 +631,16 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .shop-item-image {
   width: 100%;
-  background: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: transparent;
+  display: block;
   overflow: hidden;
-  aspect-ratio: auto;
+  line-height: 0;
 }
 
 .shop-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   padding: 0;
 }
@@ -663,7 +658,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .shop-item-info .price {
   font-size: 1.1rem;
-  color: #2c2c2c;
+  color: #31729b;
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
@@ -688,15 +683,8 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 @media (max-width: 1400px) {
   .shop-grid {
-    column-count: 3;
-    column-gap: 1.3rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .shop-grid {
     column-count: 2;
-    column-gap: 1.2rem;
+    column-gap: 1.3rem;
   }
 }
 
@@ -705,6 +693,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
     column-count: 2;
     column-gap: 1rem;
     margin-top: 2rem;
+    padding: 0 1rem 4rem;
   }
 
   .shop-item {
@@ -768,10 +757,30 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 /* ─── Contact ─── */
 .contact-page {
-  max-width: 600px;
-  margin: 4rem auto;
+  max-width: 100%;
+  margin: 0 rem;
   padding: 0 2rem;
   animation: slideUp 0.6s ease-out;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 951px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.contact-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-page h1 {
@@ -783,8 +792,9 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 .contact-form {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contact-form label {
@@ -808,7 +818,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2c2c2c;
+  border-color: #31729b;
 }
 
 /* ─── Admin ─── */
@@ -1015,6 +1025,52 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   color: #888;
 }
 
+.workshop-reviews {
+  padding: 2rem 2rem 4rem;
+}
+
+.workshop-reviews h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.workshop-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workshop-review {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.workshop-review blockquote {
+  color: #555;
+  line-height: 1.7;
+}
+
+.workshop-review blockquote p + p {
+  margin-top: 0.75rem;
+}
+
+.workshop-review figcaption {
+  margin-top: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.workshop-review-rating {
+  margin-bottom: 0.5rem;
+  color: #31729b;
+  letter-spacing: 0.1em;
+}
+
 /* ─── Modal ─── */
 .modal {
   position: fixed;
@@ -1195,8 +1251,8 @@ footer {
   padding-left: max(2rem, env(safe-area-inset-left));
   padding-right: max(2rem, env(safe-area-inset-right));
   padding-bottom: max(3rem, env(safe-area-inset-bottom));
-  background: #1a1a1a;
-  color: #ccc;
+  background: #31729b;
+  color: #fff;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   animation: slideUp 1s ease-out;

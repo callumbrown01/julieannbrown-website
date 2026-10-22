@@ -1,5 +1,173 @@
 [
   {
+    "id": "s1729612800001",
+    "title": "Leucospermin",
+    "src": "/images/paintings/Leucospermin_main.jpeg",
+    "price": 950.0,
+    "medium": "Awakenings Collection | Original Oil Painting on Canvas | 60 x 60cm | Natural Oak Floating Frame | 63 x 63 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 0,
+    "dimensions": {
+      "width": 60,
+      "height": 60
+    }
+  },
+  {
+    "id": "s1729612800002",
+    "title": "Protea",
+    "src": "/images/paintings/Protea_main.jpeg",
+    "price": 950.0,
+    "medium": "Awakenings Collection | Original Oil Painting on Canvas | 60 x 60cm | White Floating Frame | 63 x 63 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 1,
+    "dimensions": {
+      "width": 60,
+      "height": 60
+    }
+  },
+  {
+    "id": "s1729612800003",
+    "title": "The Beauty of Youth",
+    "src": "/images/paintings/TheBeautyOfYouth_main.jpg",
+    "price": 0.0,
+    "medium": "Private Commission | Original Oil Painting on Canvas | 30 x 60cm | Natural Oak Floating Frame | 38 x 63 x 5.5cm",
+    "sold": true,
+    "stripeLink": "",
+    "order": 2,
+    "dimensions": {
+      "width": 30,
+      "height": 60
+    }
+  },
+  {
+    "id": "s1729612800004",
+    "title": "Cabernet Promise",
+    "src": "/images/paintings/CabernetPromise_main.jpg",
+    "price": 440.0,
+    "medium": "Margaret River Vintage Collection | Original Oil Painting on Canvas | 25 x 25cm | Natural Oak Floating Frame | 28 x 28 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 3,
+    "dimensions": {
+      "width": 25,
+      "height": 25
+    }
+  },
+  {
+    "id": "s1729612810004",
+    "title": "Chardonnay Prelude",
+    "src": "/images/paintings/ChardonnayPrelude_main.jpg",
+    "price": 440.0,
+    "medium": "Margaret River Vintage Collection | Original Oil Painting on Canvas | 25 x 25cm | Natural Oak Floating Frame | 28 x 28 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 3,
+    "dimensions": {
+      "width": 25,
+      "height": 25
+    }
+  },
+  {
+    "id": "s1729612820004",
+    "title": "Shiraz Embrace",
+    "src": "/images/paintings/ShirazEmbrace_main.jpg",
+    "price": 440.0,
+    "medium": "Margaret River Vintage Collection | Original Oil Painting on Canvas | 25 x 25cm | Natural Oak Floating Frame | 28 x 28 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 3,
+    "dimensions": {
+      "width": 25,
+      "height": 25
+    }
+  },
+  {
+    "id": "s1729612820005",
+    "title": "Veraison",
+    "src": "/images/paintings/Veraison_main.jpg",
+    "price": 440.0,
+    "medium": "Margaret River Vintage Collection | Original Oil Painting on Canvas | 25 x 25cm | Natural Oak Floating Frame | 28 x 28 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 3,
+    "dimensions": {
+      "width": 25,
+      "height": 25
+    }
+  },
+  {
+    "id": "s1729612800005",
+    "title": "Kings Table",
+    "src": "/images/paintings/KingsTable_main.jpeg",
+    "price": 880.0,
+    "medium": "Margaret River Vintage Collection | Original Oil Painting on Canvas | 60 x 35cm | Natural Oak Floating Frame | 63 x 38 x 5.5cm",
+    "sold": false,
+    "stripeLink": "",
+    "order": 4,
+    "dimensions": {
+      "width": 60,
+      "height": 35
+    }
+  },
+  {
+    "id": "s1729612800006",
+    "title": "Ted",
+    "src": "/images/paintings/Ted.jpeg",
+    "price": 0.0,
+    "medium": "Original Oil Painting on Canvas | 30 x 25cm | Natural Oak Floating Frame | 33 x 28 x 5.5cm",
+    "sold": true,
+    "stripeLink": "",
+    "order": 5,
+    "dimensions": {
+      "width": 30,
+      "height": 25
+    }
+  },
+  {
+    "id": "s1729612800007",
+    "title": "Julius",
+    "src": "/images/paintings/Julius.jpg",
+    "price": 0.0,
+    "medium": "Private Commission | Original Oil Painting on Canvas | 25 x 30cm",
+    "sold": true,
+    "stripeLink": "",
+    "order": 6,
+    "dimensions": {
+      "width": 25,
+      "height": 30
+    }
+  },
+  {
+    "id": "s1729612800008",
+    "title": "Billie",
+    "src": "/images/paintings/Billie.jpg",
+    "price": 0.0,
+    "medium": "Private Commission | Original Oil Painting on Canvas | 25 x 30cm",
+    "sold": true,
+    "stripeLink": "",
+    "order": 7,
+    "dimensions": {
+      "width": 25,
+      "height": 30
+    }
+  },
+  {
+    "id": "s1729612800009",
+    "title": "Occy",
+    "src": "/images/paintings/Occy.jpeg",
+    "price": 0.0,
+    "medium": "Private Commission | Original Oil Painting on Canvas | 30 x 25cm | Natural Oak Floating Frame | 33 x 28 x 5.5cm",
+    "sold": true,
+    "stripeLink": "",
+    "order": 8,
+    "dimensions": {
+      "width": 30,
+      "height": 25
+    }
+  },
+  {
     "id": "s1785381539474",
     "title": "Strawberry Duo",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381539/shop/dqwgn2tjd99msfxb9xfv.jpg",
@@ -212,7 +380,7 @@
   {
     "id": "s1785381572899",
     "title": "Stillwater",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381572/shop/gw5juwrbiopbpj4ehzkh.jpg",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381322/gallery/rerrebwnb6tygh2r4zhg.jpg",
     "price": 2000.0,
     "medium": "Waterdance Collection \nOil on Canvas | 2013 | 41 x 92cm",
     "sold": true,

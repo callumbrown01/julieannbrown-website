@@ -6,18 +6,18 @@
   // Filter out items with $0 price
   const items = allItems.filter(item => item.price && item.price > 0);
 
-  items.sort((a, b) => a.order - b.order).forEach(item => {
+  // Sort: unsold first, then by order
+  items.sort((a, b) => {
+    if (a.sold !== b.sold) {
+      return a.sold ? 1 : -1; // unsold items (false) come first
+    }
+    return a.order - b.order;
+  }).forEach(item => {
     const card = document.createElement('div');
     card.className = 'shop-item';
 
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'shop-item-image';
-
-    // Set aspect ratio if dimensions are available
-    if (item.dimensions && item.dimensions.width && item.dimensions.height) {
-      const aspectRatio = item.dimensions.width / item.dimensions.height;
-      imgWrapper.style.aspectRatio = aspectRatio;
-    }
 
     const img = document.createElement('img');
     img.src = item.src;
@@ -29,7 +29,7 @@
     info.innerHTML = `
       <h3>${item.title}</h3>
       <p class="medium">${item.medium}</p>
-      <p class="price">$${item.price.toLocaleString()} AUD</p>
+      ${!item.sold ? `<p class="price">$${item.price.toLocaleString()} AUD</p>` : ''}
       ${item.sold
         ? `<span class="sold-badge">Sold</span>`
         : `<a class="btn" href="${item.stripeLink}" target="_blank">Buy Now</a>`}`;

@@ -1,5 +1,113 @@
 [
   {
+    "id": "g1729612800001",
+    "title": "Leucospermin",
+    "src": "/images/paintings/Leucospermin_main.jpeg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612800002",
+    "title": "Protea",
+    "src": "/images/paintings/Protea_main.jpeg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612800003",
+    "title": "The Beauty of Youth",
+    "src": "/images/paintings/TheBeautyOfYouth_main.jpg",
+    "featured": true,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1729612800004",
+    "title": "Cabernet Promise",
+    "src": "/images/paintings/CabernetPromise_main.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612820004",
+    "title": "Chardonnay Prelude",
+    "src": "/images/paintings/ChardonnayPrelude_main.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612820005",
+    "title": "Shiraz Embrace",
+    "src": "/images/paintings/ShirazEmbrace_main.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612820006",
+    "title": "Veraison",
+    "src": "/images/paintings/Veraison_main.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612800005",
+    "title": "Kings Table",
+    "src": "/images/paintings/KingsTable_main.jpeg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612800006",
+    "title": "Ted",
+    "src": "/images/paintings/Ted.jpeg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800007",
+    "title": "Julius",
+    "src": "/images/paintings/Julius.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800008",
+    "title": "Billie",
+    "src": "/images/paintings/Billie.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800009",
+    "title": "Occy",
+    "src": "/images/paintings/Occy.jpeg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
     "id": "g1785381323513",
     "title": "Stillwater",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381322/gallery/rerrebwnb6tygh2r4zhg.jpg",
@@ -12,7 +120,7 @@
     "id": "g1785381326601",
     "title": "Python Pool",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381325/gallery/smsi7dmiawh6hrigy2x0.jpg",
-    "featured": false,
+    "featured": true,
     "categories": [
       "Waterwork"
     ]
@@ -46,7 +154,7 @@
     "id": "g1785381349122",
     "title": "parakeet bay framed",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381348/gallery/ox7tlvntmvu2e2gtnvja.jpg",
-    "featured": false,
+    "featured": true,
     "categories": []
   },
   {
@@ -62,7 +170,7 @@
     "id": "g1785381355895",
     "title": "Billabong-white-frame-copy",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381355/gallery/xjsxmbqspa9xftxefnqw.jpg",
-    "featured": false,
+    "featured": true,
     "categories": []
   },
   {
@@ -123,7 +231,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381378/gallery/bepk5xqbxihgbgbvil0o.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -132,7 +240,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381381/gallery/wpxpfxcsebfnuaz5zwmr.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -141,7 +249,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381384/gallery/agnjlc2fitbigmynwuci.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -150,7 +258,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381387/gallery/pi3gkpkwhehuqmd7nm4u.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -159,7 +267,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381391/gallery/khrqkvjn7uj1riutwwvl.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -168,7 +276,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381395/gallery/beryszbvapqc2lx2bk0c.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -177,7 +285,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381398/gallery/rl3pcumwutxlor4tnc6m.jpg",
     "featured": false,
     "categories": [
-      "Landscape, Waterwork, Portrait"
+      "Sea + Landscape, Waterwork, Portrait"
     ]
   },
   {
@@ -219,7 +327,7 @@
   {
     "id": "g1785381416095",
     "title": "gen_revised",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381415/gallery/ofps2phiwkeksvuyhsga.jpg",
+    "src": "/images/paintings/Gen.jpg",
     "featured": false,
     "categories": [
       "Portrait"
@@ -285,7 +393,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381438/gallery/xucpnhdwswjmdtntfcln.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -294,7 +402,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381441/gallery/dybrj8dusnjxvtdcab5x.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -328,9 +436,9 @@
     "id": "g1785381454833",
     "title": "Tahitian-Pool",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381454/gallery/hpjekpsa2vah50kzhqzc.jpg",
-    "featured": false,
+    "featured": true,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -348,7 +456,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381460/gallery/ezljkr2tgr8y0ay1fa6r.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -366,7 +474,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381467/gallery/jxr11oh4leb5y89abzml.png",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -402,7 +510,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381478/gallery/yuxarqqbdvl0g9qawvgo.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -411,7 +519,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381481/gallery/nohbpxsbd1ykvoig286s.jpg",
     "featured": false,
     "categories": [
-      "Landscape"
+      "Sea + Landscape"
     ]
   },
   {
@@ -420,7 +528,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381485/gallery/qhvtc8dgat79gtwoz8ng.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -429,7 +537,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381488/gallery/xgsmctgep9hcbndphmal.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -438,7 +546,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381491/gallery/p6nykukhkwzil9xb1kkr.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -447,7 +555,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381495/gallery/ypu8xdf6vxqsq4i7p1lp.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -456,7 +564,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381498/gallery/u9jlsucnxelk9awjzuoh.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -465,7 +573,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381501/gallery/kpgw0mw9k782vfymfn7h.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -474,7 +582,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381505/gallery/iurvttkj6ygp3kv5zlnf.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -483,7 +591,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381508/gallery/v5p3qqvzgjorprdmua4n.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -492,7 +600,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381512/gallery/uxiz9xtanxybjhmqmlym.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -501,7 +609,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381516/gallery/grxhuc3mgpsnercqkl75.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -510,7 +618,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381520/gallery/svid98nu6p5g1xyiak6y.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -519,7 +627,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381524/gallery/qmtmx1jbsnepp046skxf.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -528,7 +636,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381528/gallery/mbqdt5tztfoiws91uii0.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -537,7 +645,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381532/gallery/azyreqoi660gp6ppejfu.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   },
   {
@@ -546,7 +654,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381536/gallery/dtrq76iud4eutr9u7efw.jpg",
     "featured": false,
     "categories": [
-      "Still Life"
+      "Still Life + Botanical"
     ]
   }
 ]
