@@ -38,6 +38,10 @@
   function renderGrid(data) {
     grid.innerHTML = '';
     data.forEach(item => {
+      const link = document.createElement('a');
+      link.href = `painting.html?id=${item.id}&source=gallery`;
+      link.className = 'gallery-item-link';
+
       const container = document.createElement('div');
       container.className = 'gallery-item';
 
@@ -47,7 +51,8 @@
       img.title = item.title;
 
       container.appendChild(img);
-      grid.appendChild(container);
+      link.appendChild(container);
+      grid.appendChild(link);
     });
   }
 

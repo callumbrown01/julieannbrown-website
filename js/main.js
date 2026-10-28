@@ -1,3 +1,17 @@
+function highlightCurrentPage() {
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  const currentPath = window.location.pathname;
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    // Check if the link href matches the current page
+    if (currentPath.endsWith(href) || 
+        (currentPath.endsWith('/') && href === 'index.html')) {
+      link.classList.add('current-page');
+    }
+  });
+}
+
 (async () => {
   const res = await fetch('data/gallery.json');
   const galleryItems = await res.json();
@@ -51,4 +65,7 @@
       thumbnails[currentSlide].classList.add('active');
     }, 5000);
   }
+
+  // Highlight current page in navigation
+  highlightCurrentPage();
 })();

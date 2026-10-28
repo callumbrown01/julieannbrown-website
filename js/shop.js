@@ -13,6 +13,10 @@
     }
     return a.order - b.order;
   }).forEach(item => {
+    const link = document.createElement('a');
+    link.href = `painting.html?id=${item.id}&source=shop`;
+    link.className = 'shop-item-link';
+
     const card = document.createElement('div');
     card.className = 'shop-item';
 
@@ -32,10 +36,11 @@
       ${!item.sold ? `<p class="price">$${item.price.toLocaleString()} AUD</p>` : ''}
       ${item.sold
         ? `<span class="sold-badge">Sold</span>`
-        : `<a class="btn" href="${item.stripeLink}" target="_blank">Buy Now</a>`}`;
+        : `<span class="btn">View Details</span>`}`;
 
     card.appendChild(imgWrapper);
     card.appendChild(info);
-    grid.appendChild(card);
+    link.appendChild(card);
+    grid.appendChild(link);
   });
 })();

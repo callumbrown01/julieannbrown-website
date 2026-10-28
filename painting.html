@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Painting — Julie-Ann Brown" />
+  <title id="page-title">Painting — Julie-Ann Brown</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <meta name="theme-color" content="#fafafa" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Julie-Ann Brown Logo" class="nav-logo-icon" />
+        <a class="logo" href="index.html">Julie-Ann Brown</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" data-label="Home">Home</a></li>
+        <li><a href="gallery.html" data-label="Gallery">Gallery</a></li>
+        <li><a href="shop.html" data-label="Shop">Shop</a></li>
+        <li><a href="workshops.html" data-label="Workshops">Workshops</a></li>
+        <li><a href="about.html" data-label="About">About</a></li>
+        <li><a href="contact.html" data-label="Contact">Contact</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://instagram.com/julieannbrownartist" target="_blank" rel="noopener noreferrer"
+          class="social-link" title="Instagram">
+          <img src="images/instagram_logo.png" alt="Instagram" class="social-icon" />
+        </a>
+        <a href="https://www.facebook.com/JulieAnnBrownArtist/" target="_blank" rel="noopener noreferrer"
+          class="social-link" title="Facebook">
+          <img src="images/facebook_logo.png" alt="Facebook" class="social-icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/julie-ann-brown-967691a3/" target="_blank" rel="noopener noreferrer"
+          class="social-link" title="LinkedIn">
+          <img src="images/linkedin_logo.png" alt="LinkedIn" class="social-icon" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="painting-detail">
+    <div class="painting-container">
+      <!-- Left sidebar - Title and Info (1/5 width) -->
+      <aside class="painting-info-sidebar">
+        <div class="painting-info-content">
+          <h1 id="painting-title" class="painting-title">Loading...</h1>
+          <div id="painting-details" class="painting-details">
+            <!-- Details will be populated here -->
+          </div>
+          <a href="#" id="back-link" class="back-link">← Back</a>
+        </div>
+      </aside>
+
+      <!-- Center - Image (3/5 width) -->
+      <section class="painting-image-container">
+        <img id="painting-image" src="" alt="" class="painting-image" />
+      </section>
+
+      <!-- Right sidebar - Price and Buy (1/5 width) -->
+      <aside class="painting-purchase-sidebar" id="purchase-sidebar">
+        <!-- Purchase section will be populated here -->
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Julie-Ann Brown. All rights reserved. Reproduction is prohibited without written consent.</p>
+    <p>Website by Callum Brown, Contact at 0429 782 385</p>
+  </footer>
+
+  <script src="js/painting.js"></script>
+  <script src="js/nav-highlight.js"></script>
+</body>
+
+</html>
