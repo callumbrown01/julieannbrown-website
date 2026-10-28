@@ -40,3 +40,6 @@ if (document.readyState === 'loading') {
 } else {
   highlightCurrentPage();
 }
+
+// Also run on page show (for browser back/forward)
+window.addEventListener('pageshow', highlightCurrentPage);
