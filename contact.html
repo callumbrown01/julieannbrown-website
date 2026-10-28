@@ -47,21 +47,27 @@
   </header>
 
   <main class="contact-page">
-    <div class="contact-content">
-      <div class="contact-image">
-        <img src="images/jules_in_studio.JPG" alt="Julie-Ann Brown in her art studio" />
-      </div>
-      <h1 class="page-title">Get in Touch</h1>
-      <p>For commissions, enquiries, or purchases, please use the form below.</p>
+    <div class="contact-layout">
+      <section class="contact-content" aria-labelledby="contact-title">
+        <h1 id="contact-title">Get in Touch</h1>
+        <div class="contact-image">
+          <img src="images/jules_in_studio.JPG" alt="Julie-Ann Brown in her art studio" />
+        </div>
+        <p>For commissions, enquiries, or purchases, please use the form below.</p>
 
-      <!-- Use Formspree (free, no server needed) -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-        <label>Name <input type="text" name="name" required /></label>
-        <label>Email <input type="email" name="email" required /></label>
-        <label>Subject <input type="text" name="subject" /></label>
-        <label>Message <textarea name="message" rows="6" required></textarea></label>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+          <label>Name <input type="text" name="name" required /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Subject <input type="text" name="subject" /></label>
+          <label>Message <textarea name="message" rows="6" required></textarea></label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+
+      <section class="instagram-panel">
+        <div class="sk-instagram-feed" data-embed-id="25725472" aria-label="Instagram feed for @julieannbrownartist"></div>
+        <script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>
+      </section>
     </div>
   </main>
 
