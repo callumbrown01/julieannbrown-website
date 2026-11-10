@@ -656,5 +656,77 @@
     "categories": [
       "Landscape, Waterwork"
     ]
+  },
+  {
+    "id": "g17942953725191",
+    "title": "Watertank Mural",
+    "src": "/images/paintings/Watertank Mural.jpeg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g17942953725192",
+    "title": "The Beauty of Youth (Charli)",
+    "src": "/images/paintings/TheBeautyOfYouth_main.jpg",
+    "featured": true,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g17942953725193",
+    "title": "LPP white frame Lounge",
+    "src": "/images/paintings/LPP White frame lounge.jpg",
+    "featured": true,
+    "categories": [
+      "Interiors"
+    ]
+  },
+  {
+    "id": "g17942953725194",
+    "title": "Pelican Landing",
+    "src": "/images/paintings/Pelican Landing.jpg",
+    "featured": true,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g17942953725195",
+    "title": "TahitianBlue",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381454/gallery/hpjekpsa2vah50kzhqzc.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g17942953725196",
+    "title": "TB white frame bath",
+    "src": "/images/paintings/TB white frame bath.jpg",
+    "featured": true,
+    "categories": [
+      "Interiors"
+    ]
+  },
+  {
+    "id": "g17942953725197",
+    "title": "Billabong",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381355/gallery/xjsxmbqspa9xftxefnqw.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381471011indjinup",
+    "title": "Indjinup",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381470/gallery/erd8fzlsxj1qyctjz45k.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
   }
 ]

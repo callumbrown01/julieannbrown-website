@@ -1,0 +1,21 @@
+/* Image cropping and zoom controls */
+.slide img[data-crop="top"] {
+  object-position: center top;
+}
+
+.slide img[data-crop="bottom"] {
+  object-position: center bottom;
+}
+
+.slide img[data-crop="center"] {
+  object-position: center center;
+}
+
+.slide img[data-crop="charli-face"] {
+  object-position: center 20%;
+}
+
+.slide img[data-zoom="0.85"] {
+  object-fit: contain;
+  object-position: center center;
+}

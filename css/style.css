@@ -1,6 +1,11 @@
 /* ─── Reset & Base ─── */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'TT Drugs';
+  src: url('../fonts/tt_drugs.otf') format('opentype');
+}
+
 *,
 *::before,
 *::after {
@@ -10,11 +15,11 @@
 }
 
 html {
-  scrollbar-gutter: stable;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'TT Drugs', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   color: #615f55;
   background: #fafafa;
   line-height: 1.6;
@@ -22,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -43,6 +49,11 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ─── Nav ─── */
@@ -84,6 +95,7 @@ nav {
   width: 6rem;
   max-width: 6rem;
   aspect-ratio: 3 / 2;
+  object-fit: contain;
 }
 
 .logo-container:hover .nav-logo-icon {
@@ -95,7 +107,7 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #615f55;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'TT Drugs', sans-serif;
   white-space: nowrap;
 }
 
@@ -265,6 +277,7 @@ nav {
   align-items: center;
   justify-content: center;
   -webkit-tap-highlight-color: transparent;
+  font-family: 'TT Drugs', sans-serif;
 }
 
 
@@ -375,6 +388,28 @@ nav {
   object-fit: cover;
 }
 
+/* Image cropping and zoom controls */
+.slide img[data-crop="top"] {
+  object-position: center top;
+}
+
+.slide img[data-crop="top-center"] {
+  object-position: center 25%;
+}
+
+.slide img[data-crop="bottom"] {
+  object-position: center bottom;
+}
+
+.slide img[data-crop="center"] {
+  object-position: center center;
+}
+
+.slide img[data-zoom="0.85"] {
+  object-fit: contain;
+  object-position: center center;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -386,58 +421,93 @@ nav {
 }
 
 .hero-content {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  transform: translateX(-50%);
   z-index: 2;
-  padding: 0 1rem;
+  text-align: center;
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   color: #fff;
-  margin-bottom: 2rem;
+  margin: 0;
   letter-spacing: 0.15em;
   font-weight: 300;
   animation: slideUp 1s ease-out 0.4s both;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'TT Drugs', sans-serif;
   text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-nav-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 53.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 3;
 }
 
 .hero-nav {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 2rem;
   animation: slideUp 1s ease-out 0.5s both;
 }
 
 .hero-nav a {
-  font-size: 1rem;
+  display: block;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
+  text-align: left;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: none;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
+  line-height: 2;
+  white-space: nowrap;
 }
 
 .hero-nav a:hover {
-  color: #fff;
-  transform: scale(1.05);
+  color: #a4a4a4;
 }
 
 .hero-social-icons {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-shrink: 0;
-  animation: slideUp 1s ease-out 0.6s both;
+  animation: slideUp 1s ease-out 3.4s both;
+  margin-top: 1rem;
+  margin-left: .7rem;
+}
+
+.hero-nav a:nth-child(1) {
+  animation: slideUp 1s ease-out 1s both;
+}
+
+.hero-nav a:nth-child(2) {
+  animation: slideUp 1s ease-out 1.4s both;
+}
+
+.hero-nav a:nth-child(3) {
+  animation: slideUp 1s ease-out 1.8s both;
+}
+
+.hero-nav a:nth-child(4) {
+  animation: slideUp 1s ease-out 2.2s both;
+}
+
+.hero-nav a:nth-child(5) {
+  animation: slideUp 1s ease-out 2.6s both;
 }
 
 .hero-social-icons .social-link {
@@ -495,7 +565,7 @@ nav {
 }
 
 .hero-content p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.5rem;
   font-weight: 300;
@@ -619,6 +689,7 @@ nav {
   letter-spacing: -0.02em;
   animation: slideDown 0.6s ease-out;
   padding: 0 1.5rem;
+  font-family: 'TT Drugs', sans-serif;
 }
 
 .page-subtitle {
@@ -635,6 +706,12 @@ main {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
+}
+
+main:has(.hero-slideshow) {
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
 }
 
 main:not(.about-page):not(.contact-page):not(.workshops-container) {
@@ -872,6 +949,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   font-weight: normal;
+  font-family: 'TT Drugs', sans-serif;
 }
 
 .contact-content>p,
@@ -1036,6 +1114,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   margin-left: auto;
   margin-right: auto;
   padding: 2rem 2rem 0;
+  font-family: 'TT Drugs', sans-serif;
 }
 
 .workshops-intro {
@@ -1179,6 +1258,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 2rem;
+  font-family: 'TT Drugs', sans-serif;
 }
 
 .workshop-reviews-grid {

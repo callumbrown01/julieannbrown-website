@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Contact — Julie-Ann Brown" />
   <title>Contact — Julie-Ann Brown</title>
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" href="images/logo.png" />
   <meta name="theme-color" content="#fafafa" />
   <link rel="stylesheet" href="css/style.css" />
@@ -55,7 +55,7 @@
         </div>
         <p>For commissions, enquiries, or purchases, please use the form below.</p>
 
-        <form name="contact" method="POST" netlify-honeypot="bot-field" netlify class="contact-form">
+        <form id="contact-form" class="contact-form">
           <input type="hidden" name="bot-field" />
           <label>Name <input type="text" name="name" required /></label>
           <label>Email <input type="email" name="email" required /></label>
@@ -77,6 +77,7 @@
     <p>Website by Callum Brown, Contact at 0429 782 385</p>
   </footer>
 
+  <script src="js/contact.js"></script>
   <script src="js/nav-highlight.js"></script>
 </body>
 
