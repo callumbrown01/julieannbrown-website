@@ -1263,24 +1263,44 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .workshop-reviews-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .workshop-review {
-  padding: 1.5rem;
-  background: #31729b;
-  border: 1px solid #31729b;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  color: #fff;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #888;
 }
 
 .workshop-review blockquote {
-  color: #fff;
+  color: #888;
   line-height: 1.7;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+}
+
+.workshop-review blockquote p {
+  position: relative;
+}
+
+.workshop-review blockquote p:first-child::before {
+  content: '"';
+  font-style: italic;
+  color: #888;
+}
+
+.workshop-review blockquote p:last-child::after {
+  content: '"';
+  font-style: italic;
+  color: #888;
 }
 
 .workshop-review blockquote p+p {
@@ -1288,14 +1308,16 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .workshop-review figcaption {
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+  color: #888;
   font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: right;
 }
 
 .workshop-review-rating {
-  margin-bottom: 0.5rem;
-  color: #fff;
+  margin-bottom: 0;
+  color: #888;
   letter-spacing: 0.1em;
 }
 
