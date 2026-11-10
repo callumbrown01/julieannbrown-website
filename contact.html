@@ -55,7 +55,8 @@
         </div>
         <p>For commissions, enquiries, or purchases, please use the form below.</p>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <form name="contact" method="POST" netlify-honeypot="bot-field" netlify class="contact-form">
+          <input type="hidden" name="bot-field" />
           <label>Name <input type="text" name="name" required /></label>
           <label>Email <input type="email" name="email" required /></label>
           <label>Subject <input type="text" name="subject" /></label>

@@ -5,7 +5,7 @@
   const filterBar = document.getElementById('gallery-filters');
 
   // Build category filters with predefined order
-  const validCategories = ['Sea + Landscape', 'Portrait', 'Creatures', 'Waterwork', 'Still Life + Botanical'];
+  const validCategories = ['Portrait', 'Landscape + Waterwork', 'Creatures', 'Still Life + Botanical'];
   const categoriesInUse = new Set();
 
   items.forEach(item => {

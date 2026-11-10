@@ -1,5 +1,419 @@
 [
   {
+    "id": "g1729612800006",
+    "title": "Ted",
+    "src": "/images/paintings/Ted.jpeg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800008",
+    "title": "Billie",
+    "src": "/images/paintings/Billie.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381366072",
+    "title": "Pelican1-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381365/gallery/fy3awn71bmpdwy17lumm.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381362982",
+    "title": "QuokkaBabySQ-e1612319167894",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381362/gallery/hdjnlji0jxuhajrfdbio.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800007",
+    "title": "Julius",
+    "src": "/images/paintings/Julius.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381375237",
+    "title": "George-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381374/gallery/g95goovumo0accxyphyk.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381368981",
+    "title": "Pelican2-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381368/gallery/p5smxw7edbikxjjju7iz.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1729612800009",
+    "title": "Occy",
+    "src": "/images/paintings/Occy.jpeg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381372440",
+    "title": "Kakapo-1",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381371/gallery/fmukvhd90uq2aegqpu6f.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381336363",
+    "title": "Pelican 3",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381335/gallery/bgz5huaozksmefxohope.jpg",
+    "featured": false,
+    "categories": [
+      "Creatures"
+    ]
+  },
+  {
+    "id": "g1785381419566",
+    "title": "HH-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381418/gallery/lfrpkj4yccwucy9khn81.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381429090",
+    "title": "Julia-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381428/gallery/rrmfnqe1xfwsbu6qsqfc.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381408357",
+    "title": "B-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381407/gallery/is83etuqhjqrcfxpooaw.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381426038",
+    "title": "Jack-MEDRES-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381425/gallery/wn3ovbcrj6hjer42hehp.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1729612800003",
+    "title": "The Beauty of Youth",
+    "src": "/images/paintings/TheBeautyOfYouth_main.jpg",
+    "featured": true,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381422613",
+    "title": "SamBEST-warm-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381422/gallery/gydtkusrr3i1lnjr9idj.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381412269",
+    "title": "Mia-Final",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381411/gallery/jzkc3fs3ippxykxnlb7s.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381436234",
+    "title": "Lily-Final",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381435/gallery/hbxosqtdjfvii4ev9njd.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381416095",
+    "title": "gen_revised",
+    "src": "/images/paintings/Gen.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381432713",
+    "title": "TheBurdenOfExpectationBEST",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381432/gallery/mk80jgvtpkhjy1aibpx9.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381405325",
+    "title": "Doug-and-His-Dog-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381404/gallery/bsbluwsm0hdczdhdfypk.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381402162",
+    "title": "Charli",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381401/gallery/x41johluodssoulo5fli.jpg",
+    "featured": false,
+    "categories": [
+      "Portrait"
+    ]
+  },
+  {
+    "id": "g1785381323513",
+    "title": "Stillwater",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381322/gallery/rerrebwnb6tygh2r4zhg.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381342565",
+    "title": "light blue water",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381342/gallery/lb09woz47salhlctdusu.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381379109",
+    "title": "BoranupIlluminated",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381378/gallery/bepk5xqbxihgbgbvil0o.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381382392",
+    "title": "SilentSentinel-MEDRES-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381381/gallery/wpxpfxcsebfnuaz5zwmr.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381326601",
+    "title": "Python Pool",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381325/gallery/smsi7dmiawh6hrigy2x0.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381385370",
+    "title": "Just-flyin-by-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381384/gallery/agnjlc2fitbigmynwuci.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381388788",
+    "title": "Vineyard-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381387/gallery/pi3gkpkwhehuqmd7nm4u.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381392104",
+    "title": "EverlastingLoveCentre",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381391/gallery/khrqkvjn7uj1riutwwvl.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381352367",
+    "title": "Billabong-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381351/gallery/kmayq3pscydqfitppvmh.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381396303",
+    "title": "ThePlan",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381395/gallery/beryszbvapqc2lx2bk0c.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381398993",
+    "title": "Smile-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381398/gallery/rl3pcumwutxlor4tnc6m.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381439357",
+    "title": "Children-of-the-Grandddy-Fig-Tree-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381438/gallery/xucpnhdwswjmdtntfcln.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381442547",
+    "title": "BradyBunchFreoPort-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381441/gallery/dybrj8dusnjxvtdcab5x.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381445370",
+    "title": "Waterdance-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381444/gallery/rr0o03m294i8fgifbmoi.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381448183",
+    "title": "deepblue",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381447/gallery/tekpy4i7cmlyoq9po5u0.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381451360",
+    "title": "Whorl-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381450/gallery/eb24psclp3ceyermmyim.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381454833",
+    "title": "Tahitian-Pool",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381454/gallery/hpjekpsa2vah50kzhqzc.jpg",
+    "featured": true,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381461314",
+    "title": "parakeet",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381460/gallery/ezljkr2tgr8y0ay1fa6r.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381465230",
+    "title": "Dark-Water-MEDRES-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381463/gallery/ztasnvsdzooaesikvw0c.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381468249",
+    "title": "Screen-Shot-2020-12-15-at-11",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381467/gallery/jxr11oh4leb5y89abzml.png",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381476330",
+    "title": "Disturbed-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381475/gallery/lv9frx99xqzkbov9ssqz.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381479284",
+    "title": "Cathedral-Rocks-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381478/gallery/yuxarqqbdvl0g9qawvgo.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381482651",
+    "title": "FreoPortMEDRES-scaled",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381481/gallery/nohbpxsbd1ykvoig286s.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape + Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381495715",
+    "title": "GrapesSilverBowlLORES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381495/gallery/ypu8xdf6vxqsq4i7p1lp.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
     "id": "g1729612800001",
     "title": "Leucospermin",
     "src": "/images/paintings/Leucospermin_main.jpeg",
@@ -18,18 +432,18 @@
     ]
   },
   {
-    "id": "g1729612800003",
-    "title": "The Beauty of Youth",
-    "src": "/images/paintings/TheBeautyOfYouth_main.jpg",
-    "featured": true,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
     "id": "g1729612800004",
     "title": "Cabernet Promise",
     "src": "/images/paintings/CabernetPromise_main.jpg",
+    "featured": false,
+    "categories": [
+      "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1729612800005",
+    "title": "Kings Table",
+    "src": "/images/paintings/KingsTable_main.jpeg",
     "featured": false,
     "categories": [
       "Still Life + Botanical"
@@ -63,463 +477,12 @@
     ]
   },
   {
-    "id": "g1729612800005",
-    "title": "Kings Table",
-    "src": "/images/paintings/KingsTable_main.jpeg",
+    "id": "g1785381505613",
+    "title": "Lemons-LORES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381505/gallery/iurvttkj6ygp3kv5zlnf.jpg",
     "featured": false,
     "categories": [
       "Still Life + Botanical"
-    ]
-  },
-  {
-    "id": "g1729612800006",
-    "title": "Ted",
-    "src": "/images/paintings/Ted.jpeg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1729612800007",
-    "title": "Julius",
-    "src": "/images/paintings/Julius.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1729612800008",
-    "title": "Billie",
-    "src": "/images/paintings/Billie.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1729612800009",
-    "title": "Occy",
-    "src": "/images/paintings/Occy.jpeg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381323513",
-    "title": "Stillwater",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381322/gallery/rerrebwnb6tygh2r4zhg.jpg",
-    "featured": true,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381326601",
-    "title": "Python Pool",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381325/gallery/smsi7dmiawh6hrigy2x0.jpg",
-    "featured": true,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381336363",
-    "title": "Pelican 3",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381335/gallery/bgz5huaozksmefxohope.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381342565",
-    "title": "light blue water",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381342/gallery/lb09woz47salhlctdusu.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381345763",
-    "title": "light blue water framed",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381345/gallery/qglmokxdcisicifz98zi.jpg",
-    "featured": false,
-    "categories": []
-  },
-  {
-    "id": "g1785381349122",
-    "title": "parakeet bay framed",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381348/gallery/ox7tlvntmvu2e2gtnvja.jpg",
-    "featured": true,
-    "categories": []
-  },
-  {
-    "id": "g1785381352367",
-    "title": "Billabong-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381351/gallery/kmayq3pscydqfitppvmh.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381355895",
-    "title": "Billabong-white-frame-copy",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381355/gallery/xjsxmbqspa9xftxefnqw.jpg",
-    "featured": true,
-    "categories": []
-  },
-  {
-    "id": "g1785381359014",
-    "title": "JFB-Blk-Frm-Brick-wall",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381358/gallery/chu4zedfufchv4ppjfhl.jpg",
-    "featured": false,
-    "categories": []
-  },
-  {
-    "id": "g1785381362982",
-    "title": "QuokkaBabySQ-e1612319167894",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381362/gallery/hdjnlji0jxuhajrfdbio.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381366072",
-    "title": "Pelican1-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381365/gallery/fy3awn71bmpdwy17lumm.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381368981",
-    "title": "Pelican2-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381368/gallery/p5smxw7edbikxjjju7iz.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381372440",
-    "title": "Kakapo-1",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381371/gallery/fmukvhd90uq2aegqpu6f.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381375237",
-    "title": "George-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381374/gallery/g95goovumo0accxyphyk.jpg",
-    "featured": false,
-    "categories": [
-      "Creatures"
-    ]
-  },
-  {
-    "id": "g1785381379109",
-    "title": "BoranupIlluminated",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381378/gallery/bepk5xqbxihgbgbvil0o.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381382392",
-    "title": "SilentSentinel-MEDRES-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381381/gallery/wpxpfxcsebfnuaz5zwmr.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381385370",
-    "title": "Just-flyin-by-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381384/gallery/agnjlc2fitbigmynwuci.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381388788",
-    "title": "Vineyard-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381387/gallery/pi3gkpkwhehuqmd7nm4u.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381392104",
-    "title": "EverlastingLoveCentre",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381391/gallery/khrqkvjn7uj1riutwwvl.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381396303",
-    "title": "ThePlan",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381395/gallery/beryszbvapqc2lx2bk0c.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381398993",
-    "title": "Smile-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381398/gallery/rl3pcumwutxlor4tnc6m.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape, Waterwork, Portrait"
-    ]
-  },
-  {
-    "id": "g1785381402162",
-    "title": "Charli",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381401/gallery/x41johluodssoulo5fli.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381405325",
-    "title": "Doug-and-His-Dog-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381404/gallery/bsbluwsm0hdczdhdfypk.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381408357",
-    "title": "B-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381407/gallery/is83etuqhjqrcfxpooaw.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381412269",
-    "title": "Mia-Final",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381411/gallery/jzkc3fs3ippxykxnlb7s.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381416095",
-    "title": "gen_revised",
-    "src": "/images/paintings/Gen.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381419566",
-    "title": "HH-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381418/gallery/lfrpkj4yccwucy9khn81.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381422613",
-    "title": "SamBEST-warm-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381422/gallery/gydtkusrr3i1lnjr9idj.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381426038",
-    "title": "Jack-MEDRES-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381425/gallery/wn3ovbcrj6hjer42hehp.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381429090",
-    "title": "Julia-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381428/gallery/rrmfnqe1xfwsbu6qsqfc.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381432713",
-    "title": "TheBurdenOfExpectationBEST",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381432/gallery/mk80jgvtpkhjy1aibpx9.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381436234",
-    "title": "Lily-Final",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381435/gallery/hbxosqtdjfvii4ev9njd.jpg",
-    "featured": false,
-    "categories": [
-      "Portrait"
-    ]
-  },
-  {
-    "id": "g1785381439357",
-    "title": "Children-of-the-Grandddy-Fig-Tree-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381438/gallery/xucpnhdwswjmdtntfcln.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381442547",
-    "title": "BradyBunchFreoPort-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381441/gallery/dybrj8dusnjxvtdcab5x.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381445370",
-    "title": "Waterdance-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381444/gallery/rr0o03m294i8fgifbmoi.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381448183",
-    "title": "deepblue",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381447/gallery/tekpy4i7cmlyoq9po5u0.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381451360",
-    "title": "Whorl-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381450/gallery/eb24psclp3ceyermmyim.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381454833",
-    "title": "Tahitian-Pool",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381454/gallery/hpjekpsa2vah50kzhqzc.jpg",
-    "featured": true,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381458305",
-    "title": "Moana-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381457/gallery/ek9zykhtgnkv2pro8ttf.jpg",
-    "featured": false,
-    "categories": [
-      "Landscape, Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381461314",
-    "title": "parakeet",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381460/gallery/ezljkr2tgr8y0ay1fa6r.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381465230",
-    "title": "Dark-Water-MEDRES-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381463/gallery/ztasnvsdzooaesikvw0c.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381468249",
-    "title": "Screen-Shot-2020-12-15-at-11",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381467/gallery/jxr11oh4leb5y89abzml.png",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381471011",
-    "title": "Indjinup-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381470/gallery/erd8fzlsxj1qyctjz45k.jpg",
-    "featured": false,
-    "categories": [
-      "Landscape, Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381473676",
-    "title": "GoldenRiverGirl-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381473/gallery/nq3xe3q9g0jkmc7bpuga.jpg",
-    "featured": false,
-    "categories": [
-      "Landscape, Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381476330",
-    "title": "Disturbed-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381475/gallery/lv9frx99xqzkbov9ssqz.jpg",
-    "featured": false,
-    "categories": [
-      "Waterwork"
-    ]
-  },
-  {
-    "id": "g1785381479284",
-    "title": "Cathedral-Rocks-LOWRES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381478/gallery/yuxarqqbdvl0g9qawvgo.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
-    ]
-  },
-  {
-    "id": "g1785381482651",
-    "title": "FreoPortMEDRES-scaled",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381481/gallery/nohbpxsbd1ykvoig286s.jpg",
-    "featured": false,
-    "categories": [
-      "Sea + Landscape"
     ]
   },
   {
@@ -550,15 +513,6 @@
     ]
   },
   {
-    "id": "g1785381495715",
-    "title": "GrapesSilverBowlLORES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381495/gallery/ypu8xdf6vxqsq4i7p1lp.jpg",
-    "featured": false,
-    "categories": [
-      "Still Life + Botanical"
-    ]
-  },
-  {
     "id": "g1785381498957",
     "title": "GrapeBunchLORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381498/gallery/u9jlsucnxelk9awjzuoh.jpg",
@@ -571,15 +525,6 @@
     "id": "g1785381502429",
     "title": "Apple-Bowl-LORES",
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381501/gallery/kpgw0mw9k782vfymfn7h.jpg",
-    "featured": false,
-    "categories": [
-      "Still Life + Botanical"
-    ]
-  },
-  {
-    "id": "g1785381505613",
-    "title": "Lemons-LORES",
-    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381505/gallery/iurvttkj6ygp3kv5zlnf.jpg",
     "featured": false,
     "categories": [
       "Still Life + Botanical"
@@ -655,6 +600,61 @@
     "featured": false,
     "categories": [
       "Still Life + Botanical"
+    ]
+  },
+  {
+    "id": "g1785381345763",
+    "title": "light blue water framed",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381345/gallery/qglmokxdcisicifz98zi.jpg",
+    "featured": false,
+    "categories": []
+  },
+  {
+    "id": "g1785381349122",
+    "title": "parakeet bay framed",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381348/gallery/ox7tlvntmvu2e2gtnvja.jpg",
+    "featured": true,
+    "categories": []
+  },
+  {
+    "id": "g1785381355895",
+    "title": "Billabong-white-frame-copy",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381355/gallery/xjsxmbqspa9xftxefnqw.jpg",
+    "featured": true,
+    "categories": []
+  },
+  {
+    "id": "g1785381359014",
+    "title": "JFB-Blk-Frm-Brick-wall",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381358/gallery/chu4zedfufchv4ppjfhl.jpg",
+    "featured": false,
+    "categories": []
+  },
+  {
+    "id": "g1785381458305",
+    "title": "Moana-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381457/gallery/ek9zykhtgnkv2pro8ttf.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape, Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381471011",
+    "title": "Indjinup-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381470/gallery/erd8fzlsxj1qyctjz45k.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape, Waterwork"
+    ]
+  },
+  {
+    "id": "g1785381473676",
+    "title": "GoldenRiverGirl-LOWRES",
+    "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381473/gallery/nq3xe3q9g0jkmc7bpuga.jpg",
+    "featured": false,
+    "categories": [
+      "Landscape, Waterwork"
     ]
   }
 ]

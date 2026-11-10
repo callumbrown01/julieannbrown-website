@@ -43,5 +43,50 @@
     "multiDay": false,
     "daysAvailable": 1,
     "stripeLink": ""
+  },
+  {
+    "id": "w4",
+    "title": "Portrait Painting",
+    "date": "2026-09-17",
+    "time": "10:00 AM",
+    "duration": "3 hours",
+    "description": "Learn the art of portrait painting in this specialized workshop. Explore techniques for capturing likeness, skin tones, and expression in oil paint.",
+    "image": "/images/paintings/TheBeautyOfYouth_main.jpg",
+    "cost": 350,
+    "maxSlots": 4,
+    "enrolledCount": 0,
+    "multiDay": false,
+    "daysAvailable": 1,
+    "stripeLink": ""
+  },
+  {
+    "id": "w5",
+    "title": "Gift Card",
+    "date": "2026-12-20",
+    "time": "10:00 AM",
+    "duration": "Flexible",
+    "description": "Purchase a gift card for any of Julie-Ann's workshops or classes. Perfect for the art lover in your life.",
+    "image": "/images/paintings/Leucospermin_main.jpeg",
+    "cost": 350,
+    "maxSlots": 1,
+    "enrolledCount": 0,
+    "multiDay": false,
+    "daysAvailable": 1,
+    "stripeLink": ""
+  },
+  {
+    "id": "w6",
+    "title": "Weekend Workshop",
+    "date": "2026-10-04",
+    "time": "10:00 AM",
+    "duration": "Full Weekend",
+    "description": "An immersive two-day painting workshop exploring landscape and waterwork techniques. Perfect for those wanting to deepen their skills.",
+    "image": "/images/paintings/Protea_main.jpeg",
+    "cost": 700,
+    "maxSlots": 6,
+    "enrolledCount": 0,
+    "multiDay": true,
+    "daysAvailable": 2,
+    "stripeLink": ""
   }
 ]

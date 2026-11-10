@@ -397,7 +397,7 @@
     "src": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381574/shop/bppinc8vrncnf8s6uzvq.jpg",
     "price": 36.0,
     "medium": "",
-    "sold": false,
+    "sold": true,
     "stripeLink": "",
     "order": 16
   },

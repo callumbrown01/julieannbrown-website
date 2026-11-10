@@ -1052,7 +1052,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .workshops-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -1060,17 +1060,21 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .workshop-card {
-  background: #fff;
+  position: relative;
+  aspect-ratio: 1;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
   animation: slideUp 0.6s ease-out;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
 }
 
 .workshop-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .workshop-card.full {
@@ -1078,25 +1082,45 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .workshop-image {
+  position: absolute;
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
+  z-index: 0;
+}
+
+.workshop-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.workshop-overlay h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: normal;
+  font-family: 'Georgia', serif;
+}
+
+.workshop-date,
+.workshop-time {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0 0 0.25rem 0;
 }
 
 .workshop-info {
+  display: none;
   padding: 1.5rem;
+  background: #f8f8f8;
 }
 
 .workshop-info h3 {
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
-}
-
-.workshop-date,
-.workshop-time {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.5rem;
 }
 
 .workshop-description {
@@ -1159,10 +1183,11 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .workshop-reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .workshop-review {
@@ -1324,7 +1349,7 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 
 .workshop-date {
   font-size: 0.9rem;
-  color: #666;
+  color: #fff;
 }
 
 .workshop-admin-details {
@@ -1465,6 +1490,10 @@ footer p {
   .page-title {
     font-size: 2rem;
   }
+
+  .workshops-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .hero-text {
@@ -1551,7 +1580,7 @@ footer p {
   justify-content: center;
   overflow: hidden;
   border-radius: 8px;
-  background: #ffffff;
+  background: #fafafa;
   position: relative;
   width: 100%;
   height: 100%;
@@ -1562,7 +1591,7 @@ footer p {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

@@ -36,24 +36,26 @@ function renderWorkshops() {
 
     const div = document.createElement('div');
     div.className = `workshop-card ${isFull ? 'full' : ''}`;
+    div.onclick = () => openEnrolForm(workshop.id);
 
     const imageHtml = workshop.image ? `<img src="${workshop.image}" alt="${workshop.title}" class="workshop-image">` : '';
 
+    // Hide date/time for certain workshops
+    const hideDateAndTime = ['w3', 'w5', 'w6'].includes(workshop.id);
+    const dateTimeHtml = hideDateAndTime ? '' : `
+      <p class="workshop-date">${formatDate(workshop.date)}</p>
+      <p class="workshop-time">${workshop.time}</p>
+    `;
+
     div.innerHTML = `
       ${imageHtml}
-      <div class="workshop-info">
+      <div class="workshop-overlay">
         <h3>${workshop.title}</h3>
-        <p class="workshop-date"><strong>Date:</strong> ${formatDate(workshop.date)}</p>
-        <p class="workshop-time"><strong>Time:</strong> ${workshop.time} (${workshop.duration})</p>
+        ${dateTimeHtml}
+      </div>
+      <div class="workshop-info" style="display: none;">
         <p class="workshop-description">${workshop.description}</p>
         ${workshop.multiDay ? `<p class="workshop-multiday"><strong>Duration:</strong> ${workshop.daysAvailable} days available</p>` : ''}
-        <button 
-          class="btn-enrol ${isFull ? 'disabled' : ''}" 
-          onclick="openEnrolForm('${workshop.id}')"
-          ${isFull ? 'disabled' : ''}
-        >
-          ${isFull ? 'Class Full' : 'Enrol Now'}
-        </button>
       </div>
     `;
     container.appendChild(div);
