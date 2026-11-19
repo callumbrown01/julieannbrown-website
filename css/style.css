@@ -2208,3 +2208,226 @@ footer p {
     font-size: 0.75rem;
   }
 }
+
+/* ─── Mobile Navigation Menu ─── */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 150;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #615f55;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 600px) {
+  /* Mobile navigation styles */
+  nav {
+    padding: 0.5rem max(0.5rem, env(safe-area-inset-left)) 0.5rem max(0.5rem, env(safe-area-inset-right));
+    gap: 0.25rem;
+  }
+
+  .logo-container {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 0.85rem;
+  }
+
+  .nav-logo-icon {
+    width: 5rem;
+    max-width: 5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: max(6rem, calc(60px + env(safe-area-inset-top)));
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .social-icons {
+    display: none;
+    gap: 1rem;
+    padding: 2rem 0;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .nav-menu.active ~ .social-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    padding: max(1rem, env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid #f0f0f0;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  /* Hero section mobile optimization */
+  .hero-slideshow {
+    height: 100dvh;
+    min-height: 100vh;
+  }
+
+  .hero-nav-wrapper {
+    position: fixed;
+    top: auto;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 3;
+  }
+
+  .hero-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-nav a {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .hero-social-icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    animation: slideUp 1s ease-out 0.4s both;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.75rem max(0.5rem, env(safe-area-inset-left)) 0.75rem max(0.5rem, env(safe-area-inset-right));
+  }
+
+  .logo-container {
+    gap: 0.3rem;
+  }
+
+  .logo {
+    font-size: 0.75rem;
+  }
+
+  .nav-logo-icon {
+    width: 4.5rem;
+    max-width: 4.5rem;
+  }
+
+  .mobile-menu-toggle {
+    padding: 0.4rem;
+  }
+
+  .mobile-menu-toggle span {
+    width: 20px;
+    height: 1.5px;
+    margin: 4px 0;
+  }
+
+  .nav-menu {
+    padding: 5rem 1.5rem 2rem;
+    padding-top: max(5rem, calc(50px + env(safe-area-inset-top)));
+  }
+
+  .nav-menu a {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+
+  .hero-slideshow {
+    height: 100dvh;
+    min-height: 100vh;
+  }
+
+  .hero-nav-wrapper {
+    bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .hero-social-icons {
+    gap: 1.5rem;
+  }
+
+  .hero-social-icons .social-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
