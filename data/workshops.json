@@ -2,91 +2,78 @@
   {
     "id": "w1",
     "title": "Introduction to Oil Painting",
-    "date": "2026-09-15",
-    "time": "10:00 AM",
-    "duration": "3 hours",
-    "description": "Build the foundational skills to paint with confidence in this full-day Oil Painting workshop for beginners and those wanting to refine and expand their existing skill set.\n\nExploring simple composition and drawing to form the basis of our painting we move on to applying tonal values to create a monochromatic underpainting.\n\nObserving the effects of light on our subject matter we translate value to colour, mixing to explore saturation and hue with attention to temperature and finally, application bringing it all together to arrive at a single session artwork.\n\nA relaxed studio environment with a maximum six participants ensures generous individual guidance along with live demonstrations.\n\nApply knowledge gained from this introductory workshop and save by coupling a second day workshop (Wednesday) in Portraiture or Still Life.",
     "image": "/images/paintings/Palette.jpg",
-    "cost": 350,
-    "maxSlots": 4,
-    "enrolledCount": 4,
-    "multiDay": false,
-    "daysAvailable": 1,
-    "stripeLink": ""
+    "isClickable": true,
+    "modalContent": {
+      "title": "Introduction to Oil Painting",
+      "dates": "Saturdays January 16, 30 | February 13, 27 | March 13, 27",
+      "time": "10am-2.30pm",
+      "investment": "$340 including painting materials",
+      "location": "Eight minutes' drive north-west of Margaret River township between Bussell Highway and Caves Road in the beautiful, forested Burnside community.",
+      "description": "Build the foundational skills to paint with confidence in this full-day Oil Painting workshop for beginners and those wanting to refine and expand their existing skill set.\n\nExploring simple composition and drawing to form the basis of our painting we move on to applying tonal values to create a monochromatic underpainting.\n\nObserving the effects of light on our subject matter we translate value to colour, mixing to explore saturation and hue with attention to temperature and finally, application bringing it all together to arrive at a completed alla prima artwork.\n\nA relaxed studio environment with a maximum four participants ensures generous individual guidance along with live demonstrations.\n\nApply knowledge gained from this introductory workshop and save by coupling a second day workshop in Still Life."
+    }
   },
   {
     "id": "w2",
     "title": "Still Life Oil Painting",
-    "date": "2026-09-16",
-    "time": "11:00 AM",
-    "duration": "3 hours",
-    "description": "For those who have some experience or wish to expand on the knowledge gained from my Introduction to Oil Painting Workshop we will venture into painting a still life composed for the day.\n\nFocusing on intense contrast to create dramatic form and dimension we learn to capture the light, interpret values, temperature and apply colour theory to create your artwork.\n\nAll workshop equipment and supplies provided. You will take away your painted canvas.",
-    "image": "https://res.cloudinary.com/fqtug4al/image/upload/v1785381485/gallery/qhvtc8dgat79gtwoz8ng.jpg",
-    "cost": 350,
-    "maxSlots": 4,
-    "enrolledCount": 4,
-    "multiDay": false,
-    "daysAvailable": 1,
-    "stripeLink": ""
+    "image": "/images/paintings/KingsTable_main.jpeg",
+    "isClickable": true,
+    "modalContent": {
+      "title": "Still Life Oil Painting",
+      "dates": "Saturday & Sundays January 16 & 17, 30 & 31 | February 13 & 14, 27 & 28 | March 13 & 14, 27 & 28",
+      "time": "10am-2.30pm",
+      "investment": "$540 including painting materials",
+      "location": "Eight minutes' drive north-west of Margaret River township between Bussell Highway and Caves Road in the beautiful, forested Burnside community.",
+      "description": "For those who have some experience or wish to expand on the knowledge gained from my Introduction to Oil Painting Workshop we add a further day, taking a deeper dive into painting a specially composed still life.\n\nFocusing on intense contrast to create dramatic form and dimension we learn to capture the light, interpret values, apply temperature and colour theory to create your artwork.\n\nA relaxed studio environment with a maximum four participants ensures generous individual guidance along with live demonstrations.\n\nAll workshop equipment and supplies provided. You will take away your painted canvas."
+    }
   },
   {
     "id": "w3",
     "title": "Create Your Own Workshop",
-    "date": "2026-12-01",
-    "time": "10:00 AM",
-    "duration": "3 hours",
-    "description": "Join Julie-Ann for her upcoming workshops and classes or choose a giftcard",
     "image": "images/calendar_image.jpg",
-    "cost": 350,
-    "maxSlots": 1,
-    "enrolledCount": 0,
-    "multiDay": false,
-    "daysAvailable": 1,
-    "stripeLink": ""
+    "isClickable": true,
+    "modalContent": {
+      "title": "Create Your Own Workshop",
+      "description": "Julie-Ann can tailor a class to your requirements with a minimum of four participants.\n\nIf you're curious about stoking your artistic talent and have some time on your hands email her to start planning!"
+    }
   },
   {
     "id": "w4",
     "title": "Portrait Painting",
-    "date": "2026-09-17",
-    "time": "10:00 AM",
-    "duration": "3 hours",
-    "description": "Learn the art of portrait painting in this specialized workshop. Explore techniques for capturing likeness, skin tones, and expression in oil paint.",
     "image": "/images/paintings/TheBeautyOfYouth_main.jpg",
-    "cost": 350,
-    "maxSlots": 4,
-    "enrolledCount": 0,
-    "multiDay": false,
-    "daysAvailable": 1,
-    "stripeLink": ""
+    "isClickable": true,
+    "modalContent": {
+      "title": "Portrait Painting",
+      "dates": "Thursdays for five consecutive weeks February 4, 11, 18, 25 and March 4",
+      "time": "9.30am-12.30pm",
+      "investment": "$300 bring your own painting materials",
+      "location": "Eight minutes' drive north-west of Margaret River township between Bussell Highway and Caves Road in the beautiful, forested Burnside community.",
+      "description": "Self-paced classes where you decide what you want to paint. Bring your own painting reference, an existing painting you want to work on or choose to paint a still life composed for the sessions. I will guide you and help resolve your painting problems.\n\nA relaxed studio environment with a maximum four participants ensures generous individual guidance along with live demonstrations."
+    }
   },
   {
     "id": "w5",
-    "title": "Gift Card",
-    "date": "2026-12-20",
-    "time": "10:00 AM",
-    "duration": "Flexible",
-    "description": "Purchase a gift card for any of Julie-Ann's workshops or classes. Perfect for the art lover in your life.",
-    "image": "/images/paintings/Leucospermin_main.jpeg",
-    "cost": 350,
-    "maxSlots": 1,
-    "enrolledCount": 0,
-    "multiDay": false,
-    "daysAvailable": 1,
-    "stripeLink": ""
+    "title": "Weekend Workshops",
+    "image": "/images/weekend_workshops.jpg",
+    "isClickable": true,
+    "isPlaceholder": true,
+    "modalContent": {
+      "title": "Weekend Workshops",
+      "dates": "Saturday & Sundays January 16 & 17, 30 & 31 | February 13 & 14, 27 & 28 | March 13 & 14, 27 & 28",
+      "time": "10am-2.30pm",
+      "investment": "$540 including painting materials",
+      "location": "Eight minutes' drive north-west of Margaret River township between Bussell Highway and Caves Road in the beautiful, forested Burnside community.",
+      "description": "For those who have some experience or wish to expand on the knowledge gained from my Introduction to Oil Painting Workshop we add a further day, taking a deeper dive into painting a specially composed still life.\n\nFocusing on intense contrast to create dramatic form and dimension we learn to capture the light, interpret values, apply temperature and colour theory to create your artwork.\n\nA relaxed studio environment with a maximum four participants ensures generous individual guidance along with live demonstrations.\n\nAll workshop equipment and supplies provided. You will take away your painted canvas."
+    }
   },
   {
     "id": "w6",
-    "title": "Weekend Workshop",
-    "date": "2026-10-04",
-    "time": "10:00 AM",
-    "duration": "Full Weekend",
-    "description": "An immersive two-day painting workshop exploring landscape and waterwork techniques. Perfect for those wanting to deepen their skills.",
-    "image": "/images/weekend_workshops.jpg",
-    "cost": 700,
-    "maxSlots": 6,
-    "enrolledCount": 0,
-    "multiDay": true,
-    "daysAvailable": 2,
-    "stripeLink": ""
+    "title": "Gift a Class",
+    "image": "/images/giftcard.png",
+    "isClickable": true,
+    "modalContent": {
+      "title": "Gift a Class",
+      "description": "Choose from any of my classes to purchase an immersive art experience for a friend or loved one.\n\nYou will be emailed a gift certificate once you have made a purchase."
+    }
   }
 ]

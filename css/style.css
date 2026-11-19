@@ -1129,6 +1129,146 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
   padding: 0 2rem;
 }
 
+/* ─── Calendar ─── */
+.calendar-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  animation: slideUp 0.6s ease-out 0.2s both;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.calendar-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  min-width: 200px;
+  text-align: center;
+  color: #615f55;
+}
+
+.calendar-nav-btn {
+  background: #31729b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.calendar-nav-btn:hover {
+  background: #245073;
+}
+
+.calendar-nav-btn:active {
+  transform: scale(0.98);
+}
+
+.calendar-container {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: 600;
+  color: #31729b;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: #615f55;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-day.has-workshop {
+  background: #d4e3f1;
+  border-color: #31729b;
+  font-weight: 600;
+  color: #245073;
+  cursor: pointer;
+}
+
+.calendar-day.has-workshop:hover {
+  background: #b8d4e8;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(49, 114, 155, 0.3);
+}
+
+.calendar-day.has-workshop:active {
+  transform: scale(0.98);
+}
+
+.calendar-legend {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid #31729b;
+}
+
+.legend-dot.has-workshop {
+  background: #b8d4e8;
+  border-color: #31729b;
+}
+
 .workshops-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1835,5 +1975,205 @@ footer p {
 
   .btn-primary {
     max-width: 100%;
+  }
+}
+
+/* ─── Workshop Modal ─── */
+.workshop-modal-content {
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.workshop-info-body {
+  color: #615f55;
+}
+
+.workshop-info-body h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.workshop-detail {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.workshop-detail strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.workshop-description-full {
+  margin: 1.5rem 0;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.workshop-modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.btn-workshop-book,
+.btn-workshop-email {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+  min-height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+}
+
+.btn-workshop-book {
+  background: #a0522d;
+  color: #fff;
+}
+
+.btn-workshop-book:hover {
+  background: #7a3e22;
+}
+
+.btn-workshop-email {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-workshop-email:hover {
+  background: #d0d0d0;
+}
+
+.workshop-modal-terms {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.workshop-modal-terms a {
+  color: #a0522d;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.workshop-modal-terms a:hover {
+  color: #7a3e22;
+}
+
+/* Terms Modal */
+.terms-modal-content {
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.terms-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #615f55;
+}
+
+.terms-body h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.terms-body h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.terms-body ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.terms-body li {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Calendar Responsive ─── */
+@media (max-width: 768px) {
+  .calendar-section {
+    padding: 0 1rem;
+  }
+
+  .calendar-header {
+    gap: 0.5rem;
+  }
+
+  .calendar-header h2 {
+    font-size: 1.3rem;
+    min-width: auto;
+  }
+
+  .calendar-nav-btn {
+    padding: 0.5rem 0.75rem;
+    min-width: 40px;
+  }
+
+  .calendar-container {
+    padding: 1rem;
+  }
+
+  .weekday {
+    font-size: 0.8rem;
+  }
+
+  .calendar-day {
+    font-size: 0.85rem;
+  }
+
+  .calendar-legend {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header {
+    flex-wrap: wrap;
+  }
+
+  .calendar-header h2 {
+    width: 100%;
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .calendar-nav-btn {
+    flex: 1;
+    padding: 0.5rem;
+  }
+
+  .calendar-container {
+    padding: 0.75rem;
+  }
+
+  .weekday {
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .calendar-day {
+    font-size: 0.75rem;
+    aspect-ratio: auto;
+    min-height: 100px;
+  }
+
+  .calendar-legend {
+    font-size: 0.75rem;
   }
 }

@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Workshops - Julie-Ann Brown">
-  <title>Workshops - Julie-Ann Brown</title>
+  <meta name="apple-mobile-web-app-title" content="Learn - Julie-Ann Brown">
+  <title>Learn - Julie-Ann Brown</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" href="images/logo.png" />
   <meta name="theme-color" content="#fafafa" />
@@ -25,7 +25,7 @@
         <li><a href="index.html" data-label="Home">Home</a></li>
         <li><a href="gallery.html" data-label="Gallery">Gallery</a></li>
         <li><a href="shop.html" data-label="Shop">Shop</a></li>
-        <li><a href="workshops.html" data-label="Workshops">Workshops</a></li>
+        <li><a href="workshops.html" data-label="Learn">Learn</a></li>
         <li><a href="about.html" data-label="About">About</a></li>
         <li><a href="contact.html" data-label="Contact">Contact</a></li>
       </ul>
@@ -48,10 +48,36 @@
 
   <main class="workshops-container">
     <div class="workshop-banner">
-      <img src="images/workshop_banner.jpg" alt="Workshops Banner" />
+      <img src="images/workshop_banner.jpg" alt="Learn Banner" />
     </div>
-    <h1>Workshops & Classes</h1>
-    <p class="workshops-intro">Join Julie-Ann for her upcoming workshops and classes or choose a giftcard.</p>
+    <h1>Learn</h1>
+    <p class="workshops-intro">Join Julie-Ann for her upcoming workshops and classes or choose to gift a class.</p>
+
+    <!-- Interactive Calendar -->
+    <div class="calendar-section">
+      <div class="calendar-header">
+        <button class="calendar-nav-btn prev" id="prevMonth" aria-label="Previous month">&larr;</button>
+        <h2 id="calendarMonthYear"></h2>
+        <button class="calendar-nav-btn next" id="nextMonth" aria-label="Next month">&rarr;</button>
+      </div>
+      <div class="calendar-container">
+        <div class="calendar-weekdays">
+          <div class="weekday">Sun</div>
+          <div class="weekday">Mon</div>
+          <div class="weekday">Tue</div>
+          <div class="weekday">Wed</div>
+          <div class="weekday">Thu</div>
+          <div class="weekday">Fri</div>
+          <div class="weekday">Sat</div>
+        </div>
+        <div class="calendar-days" id="calendarDays">
+          <!-- Populated by calendar.js -->
+        </div>
+      </div>
+      <div class="calendar-legend">
+        <span class="legend-item"><span class="legend-dot has-workshop"></span> Workshop available</span>
+      </div>
+    </div>
 
     <div id="workshops-list" class="workshops-grid">
       <!-- Populated by workshops.js -->
@@ -88,7 +114,7 @@
 
         <figure class="workshop-review">
           <blockquote>
-            <p>Julieann is a warm, encouraging teacher, and her painting workshop was so much fun. I enjoyed it so much
+            <p>Julie-Ann is a warm, encouraging teacher, and her painting workshop was so much fun. I enjoyed it so much
               I've since bought my own oil paints and brushes. Highly recommend!</p>
           </blockquote>
           <figcaption>Paulette, Perth</figcaption>
@@ -110,6 +136,16 @@
       </div>
     </section>
   </main>
+
+  <!-- Workshop Info Modal -->
+  <div id="workshop-info-modal" class="modal hidden">
+    <div class="modal-content workshop-modal-content">
+      <button class="modal-close" onclick="closeWorkshopInfo()">&times;</button>
+      <div id="workshop-info-body" class="workshop-info-body">
+        <!-- Populated by workshops.js -->
+      </div>
+    </div>
+  </div>
 
   <!-- Enrollment Form Modal -->
   <div id="enrol-modal" class="modal hidden">
@@ -158,6 +194,7 @@
     </div>
   </div>
 
+  <script src="js/calendar.js"></script>
   <script src="js/workshops.js"></script>
   <script src="js/nav-highlight.js"></script>
 </body>

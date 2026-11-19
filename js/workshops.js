@@ -31,67 +31,93 @@ function renderWorkshops() {
   }
 
   workshopsData.forEach(workshop => {
-    const spotsLeft = workshop.maxSlots - (workshop.enrolledCount || 0);
-    const isFull = spotsLeft <= 0;
-
     const div = document.createElement('div');
-    div.className = `workshop-card ${isFull ? 'full' : ''}`;
-    div.onclick = () => openEnrolForm(workshop.id);
+    div.className = 'workshop-card';
+    div.onclick = () => openWorkshopInfo(workshop.id);
 
     const imageHtml = workshop.image ? `<img src="${workshop.image}" alt="${workshop.title}" class="workshop-image">` : '';
-
-    // Hide date/time for certain workshops
-    const hideDateAndTime = ['w3', 'w5', 'w6'].includes(workshop.id);
-    const dateTimeHtml = hideDateAndTime ? '' : `
-      <p class="workshop-date">${formatDate(workshop.date)}</p>
-      <p class="workshop-time">${workshop.time}</p>
-    `;
 
     div.innerHTML = `
       ${imageHtml}
       <div class="workshop-overlay">
         <h3>${workshop.title}</h3>
-        ${dateTimeHtml}
-      </div>
-      <div class="workshop-info" style="display: none;">
-        <p class="workshop-description">${workshop.description}</p>
-        ${workshop.multiDay ? `<p class="workshop-multiday"><strong>Duration:</strong> ${workshop.daysAvailable} days available</p>` : ''}
       </div>
     `;
     container.appendChild(div);
   });
 }
 
+// ─── WORKSHOP INFO MODAL ───────────────────────────────────────────
+function openWorkshopInfo(workshopId) {
+  const workshop = workshopsData.find(w => w.id === workshopId);
+  if (!workshop || !workshop.modalContent) return;
+
+  const modal = document.getElementById('workshop-info-modal');
+  const body = document.getElementById('workshop-info-body');
+  const content = workshop.modalContent;
+
+  let html = `<h2>${content.title}</h2>`;
+
+  if (content.dates) {
+    html += `<div class="workshop-detail"><strong>Dates:</strong> ${content.dates}</div>`;
+  }
+
+  if (content.time) {
+    html += `<div class="workshop-detail"><strong>Time:</strong> ${content.time}</div>`;
+  }
+
+  if (content.investment) {
+    html += `<div class="workshop-detail"><strong>Investment:</strong> ${content.investment}</div>`;
+  }
+
+  if (content.location) {
+    html += `<div class="workshop-detail"><strong>Location:</strong> ${content.location}</div>`;
+  }
+
+  if (content.description) {
+    html += `<div class="workshop-description-full">${content.description.split('\n').join('<br>')}</div>`;
+  }
+
+  // Add action buttons if not a placeholder
+  if (!workshop.isPlaceholder) {
+    html += `
+      <div class="workshop-modal-actions">
+        <button class="btn-workshop-book" onclick="openEnrolForm('${workshop.id}')">Book</button>
+        <button class="btn-workshop-email" onclick="openEmailModal()">Unsure? Email me</button>
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="workshop-modal-actions">
+        <button class="btn-workshop-email" onclick="openEmailModal()">Interested? Email me</button>
+      </div>
+    `;
+  }
+
+  html += `<div class="workshop-modal-terms"><a href="#" onclick="openTermsModal(event)">Terms and Conditions</a></div>`;
+
+  body.innerHTML = html;
+  modal.classList.remove('hidden');
+}
+
+function closeWorkshopInfo() {
+  document.getElementById('workshop-info-modal').classList.add('hidden');
+}
+
 // ─── ENROL FORM ────────────────────────────────────────────────────
 function openEnrolForm(workshopId) {
-  currentEnrolWorkshop = workshopsData.find(w => w.id === workshopId);
-  if (!currentEnrolWorkshop) return;
+  const workshop = workshopsData.find(w => w.id === workshopId);
+  if (!workshop) return;
+
+  currentEnrolWorkshop = workshop;
 
   // Reset form
   document.getElementById('enrol-form').reset();
-  document.getElementById('enrol-modal-title').textContent = `Enrol in: ${currentEnrolWorkshop.title}`;
-
-  // Show/hide days selection
-  const daysGroup = document.getElementById('enrol-days-group');
-  if (currentEnrolWorkshop.multiDay) {
-    daysGroup.classList.remove('hidden');
-    document.getElementById('enrol-days').required = true;
-  } else {
-    daysGroup.classList.add('hidden');
-    document.getElementById('enrol-days').required = false;
-    document.getElementById('enrol-days').value = '1';
-  }
-
-  // Display cost
-  const costLabel = document.getElementById('enrol-cost-label');
-  if (currentEnrolWorkshop.multiDay) {
-    costLabel.textContent = `Cost: $${currentEnrolWorkshop.cost} per day (selected days)`;
-  } else {
-    costLabel.textContent = `Cost: $${currentEnrolWorkshop.cost}`;
-  }
+  document.getElementById('enrol-modal-title').textContent = `Enrol in: ${workshop.title}`;
 
   // Show modal
   document.getElementById('enrol-modal').classList.remove('hidden');
+  closeWorkshopInfo();
 }
 
 function closeEnrolForm() {
@@ -108,7 +134,6 @@ async function submitEnrolForm(e) {
   const lastName = document.getElementById('enrol-last-name').value.trim();
   const email = document.getElementById('enrol-email').value.trim();
   const phone = document.getElementById('enrol-phone').value.trim();
-  const days = document.getElementById('enrol-days').value || '1';
 
   if (!firstName || !lastName || !email || !phone) {
     alert('Please fill in all required fields.');
@@ -123,8 +148,6 @@ async function submitEnrolForm(e) {
     lastName,
     email,
     phone,
-    days: parseInt(days),
-    cost: currentEnrolWorkshop.cost * parseInt(days),
     timestamp: new Date().toISOString(),
     status: 'pending'
   };
@@ -134,17 +157,70 @@ async function submitEnrolForm(e) {
   enrollments.push(enrollment);
   localStorage.setItem('workshopEnrollments', JSON.stringify(enrollments));
 
-  // Redirect to Stripe payment link if available
-  if (currentEnrolWorkshop.stripeLink) {
-    const stripeUrl = new URL(currentEnrolWorkshop.stripeLink);
-    stripeUrl.searchParams.append('prefilled_email', email);
-    stripeUrl.searchParams.append('prefilled_name', `${firstName} ${lastName}`);
-    window.location.href = stripeUrl.toString();
-  } else {
-    alert(`Thank you for enrolling, ${firstName}! We will contact you at ${email} to confirm your enrollment and payment details.`);
-    closeEnrolForm();
-    renderWorkshops();
-  }
+  alert(`Thank you for enrolling, ${firstName}! We will contact you at ${email} to confirm your enrollment and payment details.`);
+  closeEnrolForm();
+  renderWorkshops();
+}
+
+// ─── EMAIL MODAL ───────────────────────────────────────────────────
+function openEmailModal() {
+  // Placeholder for email functionality
+  window.location.href = 'mailto:julie@julieannbrown.com';
+}
+
+// ─── TERMS MODAL ───────────────────────────────────────────────────
+function openTermsModal(e) {
+  e.preventDefault();
+  
+  const termsContent = `
+    <h2>Terms and Conditions</h2>
+    
+    <h3>Privacy</h3>
+    <p>The information collected for the booking of these workshops is intended only for administration purposes.</p>
+    <p>By booking with us we assume you may be interested in similar events and therefore we may contact you regarding future opportunities.</p>
+    <p>Photography may be taken during these events that may be used in future promotion.</p>
+    <p>Please advise if you wish to opt-out of your image being reproduced.</p>
+    <p>Participants must seek permission to take photographs during the workshops. Video recording is prohibited for the duration of the workshops.</p>
+    
+    <h3>Securing Your Place</h3>
+    <p>Your place is secured in the selected class or workshop upon full payment. You will receive confirmation and further details via email within the 24 hours after booking.</p>
+    
+    <h3>Cancellation Policy</h3>
+    <ul>
+      <li>More than seven days prior will receive a full refund less a $50 administration fee</li>
+      <li>Within seven days if your position is filled you will receive a full refund less a $50 administration fee</li>
+      <li>No refunds if cancelled within 48 hours of the event</li>
+      <li>All funds will be fully refunded in the unlikely event Julie-Ann has to cancel</li>
+    </ul>
+    
+    <h3>Workshop Location</h3>
+    <p>Less than 10 minutes drive north-west of Margaret River township between Bussell Highway and Caves Road in the beautiful, forested Burnside community.</p>
+    
+    <h3>Workshop Environment</h3>
+    <p>It is the Participants responsibility to wear workshop appropriate clothing where there is exposure to paints and liquids.</p>
+    <ul>
+      <li>Closed in shoes are essential</li>
+      <li>An apron or old long-sleeved overshirt as a minimum protection for clothing</li>
+      <li>Gloves are optional</li>
+      <li>Water bottle</li>
+      <li>Notepad and pencil</li>
+      <li>Tea, coffee, rainwater and access to the biscuit tin provided</li>
+      <li>Lunch must be brought with you. Food can be stored in the studio fridge and there is a microwave available for use</li>
+    </ul>
+  `;
+
+  // Create and show a modal with terms
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  modal.id = 'terms-modal';
+  modal.innerHTML = `
+    <div class="modal-content terms-modal-content">
+      <button class="modal-close" onclick="document.getElementById('terms-modal').remove()">&times;</button>
+      <div class="terms-body">${termsContent}</div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
 }
 
 // ─── UTILITIES ─────────────────────────────────────────────────────
@@ -158,8 +234,13 @@ document.addEventListener('DOMContentLoaded', initWorkshops);
 
 // Close modal on outside click
 document.addEventListener('click', (e) => {
-  const modal = document.getElementById('enrol-modal');
-  if (e.target === modal) {
+  const infoModal = document.getElementById('workshop-info-modal');
+  const enrolModal = document.getElementById('enrol-modal');
+  
+  if (e.target === infoModal) {
+    closeWorkshopInfo();
+  }
+  if (e.target === enrolModal) {
     closeEnrolForm();
   }
 });
