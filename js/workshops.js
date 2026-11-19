@@ -5,6 +5,7 @@ const GITHUB_REPO = 'julieannbrown-website';
 // ─── DATA ──────────────────────────────────────────────────────────
 let workshopsData = [];
 let currentEnrolWorkshop = null;
+let currentGiftCardWorkshop = null;
 
 // ─── INIT ──────────────────────────────────────────────────────────
 async function initWorkshops() {
@@ -51,6 +52,12 @@ function renderWorkshops() {
 function openWorkshopInfo(workshopId) {
   const workshop = workshopsData.find(w => w.id === workshopId);
   if (!workshop || !workshop.modalContent) return;
+
+  // Handle gift card specially
+  if (workshop.id === 'w6') {
+    openGiftCardForm();
+    return;
+  }
 
   const modal = document.getElementById('workshop-info-modal');
   const body = document.getElementById('workshop-info-body');
@@ -223,6 +230,129 @@ function openTermsModal(e) {
   document.body.appendChild(modal);
 }
 
+// ─── GIFT CARD FORM ────────────────────────────────────────────────
+function openGiftCardForm() {
+  // Reset form
+  document.getElementById('giftcard-form').reset();
+  document.getElementById('giftcard-class-info').style.display = 'none';
+  currentGiftCardWorkshop = null;
+
+  // Populate class dropdown with all bookable classes (exclude gift card and create your own)
+  const classSelect = document.getElementById('giftcard-class');
+  classSelect.innerHTML = '<option value="">Choose a class...</option>';
+
+  workshopsData.forEach(workshop => {
+    // Skip gift card itself and "Create Your Own" (no specific dates)
+    if (workshop.id !== 'w6' && workshop.id !== 'w3' && workshop.modalContent && workshop.modalContent.dates) {
+      const option = document.createElement('option');
+      option.value = workshop.id;
+      option.textContent = workshop.title;
+      classSelect.appendChild(option);
+    }
+  });
+
+  // Show modal
+  document.getElementById('giftcard-modal').classList.remove('hidden');
+}
+
+function closeGiftCardForm() {
+  document.getElementById('giftcard-modal').classList.add('hidden');
+  currentGiftCardWorkshop = null;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Add event listener for class selection in gift card form
+  const classSelect = document.getElementById('giftcard-class');
+  if (classSelect) {
+    classSelect.addEventListener('change', (e) => {
+      const workshopId = e.target.value;
+      const infoDiv = document.getElementById('giftcard-class-info');
+
+      if (workshopId) {
+        const workshop = workshopsData.find(w => w.id === workshopId);
+        if (workshop && workshop.modalContent) {
+          currentGiftCardWorkshop = workshop;
+          const content = workshop.modalContent;
+          
+          let infoHtml = `<strong>${content.title}</strong>`;
+          if (content.dates) {
+            infoHtml += `<br>Dates: ${content.dates}`;
+          }
+          if (content.time) {
+            infoHtml += `<br>Time: ${content.time}`;
+          }
+          if (content.investment) {
+            infoHtml += `<br>Investment: ${content.investment}`;
+          }
+          
+          infoDiv.innerHTML = infoHtml;
+          infoDiv.style.display = 'block';
+        }
+      } else {
+        infoDiv.style.display = 'none';
+        currentGiftCardWorkshop = null;
+      }
+    });
+  }
+}, { once: true });
+
+async function submitGiftCardForm(e) {
+  e.preventDefault();
+
+  if (!currentGiftCardWorkshop) {
+    alert('Please select a class.');
+    return;
+  }
+
+  const holderFirstName = document.getElementById('giftcard-holder-first-name').value.trim();
+  const holderLastName = document.getElementById('giftcard-holder-last-name').value.trim();
+  const holderEmail = document.getElementById('giftcard-holder-email').value.trim();
+  const holderPhone = document.getElementById('giftcard-holder-phone').value.trim();
+
+  const recipientFirstName = document.getElementById('giftcard-recipient-first-name').value.trim();
+  const recipientLastName = document.getElementById('giftcard-recipient-last-name').value.trim();
+  const recipientEmail = document.getElementById('giftcard-recipient-email').value.trim();
+
+  if (!holderFirstName || !holderLastName || !holderEmail || !holderPhone) {
+    alert('Please fill in all booking holder details.');
+    return;
+  }
+
+  if (!recipientFirstName || !recipientLastName) {
+    alert('Please fill in recipient name.');
+    return;
+  }
+
+  // Create gift card purchase object
+  const giftCardPurchase = {
+    id: 'gc' + Date.now(),
+    workshopId: currentGiftCardWorkshop.id,
+    workshopTitle: currentGiftCardWorkshop.title,
+    bookingHolder: {
+      firstName: holderFirstName,
+      lastName: holderLastName,
+      email: holderEmail,
+      phone: holderPhone
+    },
+    recipient: {
+      firstName: recipientFirstName,
+      lastName: recipientLastName,
+      email: recipientEmail
+    },
+    timestamp: new Date().toISOString(),
+    status: 'pending'
+  };
+
+  // Store in localStorage
+  let giftCards = JSON.parse(localStorage.getItem('giftCardPurchases') || '[]');
+  giftCards.push(giftCardPurchase);
+  localStorage.setItem('giftCardPurchases', JSON.stringify(giftCards));
+
+  alert(`Thank you for the gift! We will email a gift certificate to ${holderEmail} for ${recipientFirstName} ${recipientLastName}.`);
+  closeGiftCardForm();
+  renderWorkshops();
+}
+
 // ─── UTILITIES ─────────────────────────────────────────────────────
 function formatDate(dateString) {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -236,11 +366,15 @@ document.addEventListener('DOMContentLoaded', initWorkshops);
 document.addEventListener('click', (e) => {
   const infoModal = document.getElementById('workshop-info-modal');
   const enrolModal = document.getElementById('enrol-modal');
+  const giftCardModal = document.getElementById('giftcard-modal');
   
   if (e.target === infoModal) {
     closeWorkshopInfo();
   }
   if (e.target === enrolModal) {
     closeEnrolForm();
+  }
+  if (e.target === giftCardModal) {
+    closeGiftCardForm();
   }
 });

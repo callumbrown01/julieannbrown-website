@@ -194,6 +194,78 @@
     </div>
   </div>
 
+  <!-- Gift Card Form Modal -->
+  <div id="giftcard-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeGiftCardForm()">&times;</button>
+      <h2>Gift a Class</h2>
+
+      <form id="giftcard-form" onsubmit="submitGiftCardForm(event)">
+        <!-- Class Selection -->
+        <div class="form-group">
+          <label for="giftcard-class">Select a Class *</label>
+          <select id="giftcard-class" name="classId" required>
+            <option value="">Choose a class...</option>
+            <!-- Populated by workshops.js -->
+          </select>
+        </div>
+
+        <div id="giftcard-class-info" class="form-group" style="display: none; background: #f5f5f5; padding: 10px; border-radius: 4px; font-size: 0.9rem; color: #666;">
+          <!-- Class details shown here -->
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <!-- Booking Holder Info -->
+        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Your Details (Booking Holder)</h3>
+        
+        <div class="form-group">
+          <label for="giftcard-holder-first-name">First Name *</label>
+          <input type="text" id="giftcard-holder-first-name" name="holderFirstName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="giftcard-holder-last-name">Last Name *</label>
+          <input type="text" id="giftcard-holder-last-name" name="holderLastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="giftcard-holder-email">Email *</label>
+          <input type="email" id="giftcard-holder-email" name="holderEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="giftcard-holder-phone">Phone Number *</label>
+          <input type="tel" id="giftcard-holder-phone" name="holderPhone" required>
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <!-- Recipient Info -->
+        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Recipient Details</h3>
+        
+        <div class="form-group">
+          <label for="giftcard-recipient-first-name">First Name *</label>
+          <input type="text" id="giftcard-recipient-first-name" name="recipientFirstName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="giftcard-recipient-last-name">Last Name *</label>
+          <input type="text" id="giftcard-recipient-last-name" name="recipientLastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="giftcard-recipient-email">Email (Optional)</label>
+          <input type="email" id="giftcard-recipient-email" name="recipientEmail">
+        </div>
+
+        <button type="submit" class="btn-enrol-submit">Purchase Gift Certificate & Pay</button>
+      </form>
+
+      <p class="form-note">You will be redirected to payment after submitting this form.</p>
+    </div>
+  </div>
+
   <script src="js/calendar.js"></script>
   <script src="js/workshops.js"></script>
   <script src="js/nav-highlight.js"></script>

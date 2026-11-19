@@ -770,19 +770,12 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .shop-item {
-  background: #fff;
+  background: transparent;
   border-radius: 2px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
   animation: slideUp 0.6s ease-out;
   break-inside: avoid;
-  margin-bottom: 1.5rem;
-}
-
-.shop-item:hover {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
-  transform: translateY(-4px);
+  margin-bottom: 1rem;
 }
 
 .shop-item-image {
@@ -802,39 +795,77 @@ main:not(.about-page):not(.contact-page):not(.workshops-container) {
 }
 
 .shop-item-info {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 0.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
 }
 
 .shop-item-info h3 {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
+  line-height: 1.4;
+  flex: 1;
 }
 
-.shop-item-info .price {
-  font-size: 1.1rem;
+.btn-price-details {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
   color: #31729b;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
 }
 
-.shop-item-info .medium {
-  font-size: 0.8rem;
-  color: #999;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+.btn-price-details:hover {
+  color: #245073;
+}
+
+.btn-arrow {
+  margin-left: 0.3rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.85em;
+}
+
+.shop-item:hover .btn-arrow {
+  transform: translateX(2px);
+}
+
+.sold-dot {
+  width: 12px;
+  height: 12px;
+  background: #dc3545;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 0 0 2px #fff, 0 1px 3px rgba(220, 53, 69, 0.4);
 }
 
 .sold-badge {
   background: #f0f0f0;
   color: #888;
-  padding: 0.5rem 1.2rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 2px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  display: inline-block;
+  display: none;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1400px) {

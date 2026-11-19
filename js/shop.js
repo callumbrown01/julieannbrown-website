@@ -30,13 +30,20 @@
 
     const info = document.createElement('div');
     info.className = 'shop-item-info';
-    info.innerHTML = `
-      <h3>${item.title}</h3>
-      <p class="medium">${item.medium}</p>
-      ${!item.sold ? `<p class="price">$${item.price.toLocaleString()} AUD</p>` : ''}
-      ${item.sold
-        ? `<span class="sold-badge">Sold</span>`
-        : `<span class="btn">View Details</span>`}`;
+    
+    if (item.sold) {
+      info.innerHTML = `
+        <div class="shop-item-title-bar">
+          <h3>${item.title}</h3>
+          <span class="sold-dot" title="Sold"></span>
+        </div>`;
+    } else {
+      info.innerHTML = `
+        <div class="shop-item-title-bar">
+          <h3>${item.title}</h3>
+          <button class="btn-price-details">$${item.price.toLocaleString()} <span class="btn-arrow">→</span></button>
+        </div>`;
+    }
 
     card.appendChild(imgWrapper);
     card.appendChild(info);
